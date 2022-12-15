@@ -92,7 +92,9 @@ const App = () => {
         {/* MAIN SLIDE */}
         <SwiperSlide className="swiper-slide first-slide">
           <h1>Gender equality in 152 years</h1>
+
           <svg
+            className={isMobile ? 'rotate90degrees' : ''}
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             fillRule="evenodd"

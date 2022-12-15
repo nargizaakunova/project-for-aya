@@ -29,6 +29,10 @@ img {
   user-drag: none;
 }
 
+.rotate90degrees {
+  transform: rotate(90deg);
+}
+
 .swiper-container,
 .swiper-wrapper {
   height: 100%;
