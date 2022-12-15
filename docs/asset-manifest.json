@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.21f7cc14.css",
-    "main.js": "/static/js/main.23640a5a.js",
-    "static/media/mars.png": "/static/media/mars.eb26f73aa01ff3de243c.png",
-    "static/media/kurmandjan.png": "/static/media/kurmandjan.22b77955e9747ca42358.png",
-    "static/media/illustration2.png": "/static/media/illustration2.7e8ceaea4af2172e4844.png",
-    "static/media/mf-womenwork_chart.jpeg": "/static/media/mf-womenwork_chart.bf40675c47c87971e814.jpeg",
-    "index.html": "/index.html",
-    "main.21f7cc14.css.map": "/static/css/main.21f7cc14.css.map",
-    "main.23640a5a.js.map": "/static/js/main.23640a5a.js.map"
+    "main.css": "./static/css/main.21f7cc14.css",
+    "main.js": "./static/js/main.ca71b4ce.js",
+    "static/media/mars.png": "./static/media/mars.eb26f73aa01ff3de243c.png",
+    "static/media/kurmandjan.png": "./static/media/kurmandjan.22b77955e9747ca42358.png",
+    "static/media/illustration2.png": "./static/media/illustration2.7e8ceaea4af2172e4844.png",
+    "static/media/mf-womenwork_chart.jpeg": "./static/media/mf-womenwork_chart.bf40675c47c87971e814.jpeg",
+    "index.html": "./index.html",
+    "main.21f7cc14.css.map": "./static/css/main.21f7cc14.css.map",
+    "main.ca71b4ce.js.map": "./static/js/main.ca71b4ce.js.map"
   },
   "entrypoints": [
     "static/css/main.21f7cc14.css",
-    "static/js/main.23640a5a.js"
+    "static/js/main.ca71b4ce.js"
   ]
 }
