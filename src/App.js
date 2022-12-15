@@ -4,9 +4,9 @@ import { FreeMode, Mousewheel, Keyboard } from 'swiper';
 
 import 'swiper/css';
 
-import kurmandjan from './kurmandjan.png';
-import illustration1 from './illustration2.png';
-import mars from './mf-womenwork_chart.jpeg';
+import kurmandjan from './images/kurmandjan.png';
+import illustration1 from './images/illustration2.png';
+import mars from './images/mf-womenwork_chart.jpeg';
 
 const isMobileOrTablet = function () {
   let check = false;
