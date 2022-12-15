@@ -5,17 +5,33 @@
 }
 
 html {
+  height: 100%;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
+  height: 100%;
   margin: 0;
   background-color: #fff;
+  touch-action: pan-x pan-y;
+}
+
+#root {
+  height: 100%;
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 .swiper-container,
 .swiper-wrapper {
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: flex-end;
 }
