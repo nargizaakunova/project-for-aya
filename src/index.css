@@ -33,6 +33,57 @@ img {
   transform: rotate(90deg);
 }
 
+/* svg arrows */
+
+svg.actionHint {
+  width: 80px;
+  height: auto;
+  margin: 0 2rem;
+  cursor: pointer;
+  overflow: visible;
+}
+svg.actionHint polygon,
+svg.actionHint path {
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+svg.actionHint polygon,
+svg.actionHint path {
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: #000;
+}
+svg.actionHint .arrow {
+  animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+svg.actionHint .arrow-fixed {
+  animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+@keyframes arrow-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-0.1rem);
+  }
+  100% {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+}
+@keyframes arrow-fixed-anim {
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* svg arrows */
+
 .swiper-container,
 .swiper-wrapper {
   height: 100%;
@@ -160,13 +211,18 @@ svg #wheel {
   animation: scroll ease 1.5s infinite;
 }
 
-.left {
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  left: 50px;
   bottom: 40px;
 }
+
+.left {
+  left: 50px;
+}
 .right {
-  position: absolute;
   right: 50px;
-  bottom: 40px;
 }

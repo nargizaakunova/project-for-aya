@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.273e186b.css",
-    "main.js": "./static/js/main.be46c9d3.js",
+    "main.css": "./static/css/main.35a18b50.css",
+    "main.js": "./static/js/main.e918a48b.js",
     "static/media/mars.png": "./static/media/mars.eb26f73aa01ff3de243c.png",
     "static/media/kurmandjan.png": "./static/media/kurmandjan.22b77955e9747ca42358.png",
     "static/media/illustration2.png": "./static/media/illustration2.7e8ceaea4af2172e4844.png",
     "static/media/mf-womenwork_chart.jpeg": "./static/media/mf-womenwork_chart.bf40675c47c87971e814.jpeg",
     "index.html": "./index.html",
-    "main.273e186b.css.map": "./static/css/main.273e186b.css.map",
-    "main.be46c9d3.js.map": "./static/js/main.be46c9d3.js.map"
+    "main.35a18b50.css.map": "./static/css/main.35a18b50.css.map",
+    "main.e918a48b.js.map": "./static/js/main.e918a48b.js.map"
   },
   "entrypoints": [
-    "static/css/main.273e186b.css",
-    "static/js/main.be46c9d3.js"
+    "static/css/main.35a18b50.css",
+    "static/js/main.e918a48b.js"
   ]
 }
