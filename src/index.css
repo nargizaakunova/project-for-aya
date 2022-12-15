@@ -139,3 +139,14 @@ svg #wheel {
   -webkit-animation: scroll ease 1.5s infinite;
   animation: scroll ease 1.5s infinite;
 }
+
+.left {
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
+}
+.right {
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+}

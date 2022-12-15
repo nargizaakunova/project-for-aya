@@ -7,6 +7,8 @@ import kurmandjan from './images/kurmandjan.png';
 import illustration1 from './images/illustration2.png';
 import womenTable from './images/mf-womenwork_chart.jpeg';
 import mars from './images/mars.png';
+import left from './images/icons8-left-arrow-60.png';
+import right from './images/icons8-right-arrow-60.png';
 
 const isMobileOrTablet = function () {
   let check = false;
@@ -89,7 +91,7 @@ const App = () => {
         </SwiperSlide>
         {/* MAIN SLIDE */}
         <SwiperSlide className="swiper-slide first-slide">
-          <h1>152 years history</h1>
+          <h1>Gender equality in 152 years</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -116,6 +118,14 @@ const App = () => {
             ></path>
           </svg>
           <p>{!isMobile ? 'Scroll up/down' : 'Swipe left/right'}</p>
+          <div className="left">
+            <p> Past</p>
+            <img src={left} alt="left" />
+          </div>
+          <div className="right">
+            <p>Future</p>
+            <img src={right} alt="right" />
+          </div>
         </SwiperSlide>
 
         {/* FUTURE EVENTS */}
@@ -125,7 +135,7 @@ const App = () => {
 
             <div className="projectInfo">
               <div className="timeline"></div>
-              <h2 className="serif">2020</h2>
+              <h2 className="serif">2024</h2>
             </div>
           </div>
         </SwiperSlide>
@@ -134,7 +144,7 @@ const App = () => {
             <img src={illustration1} alt="illustration" />
             <div className="projectInfo">
               <div className="timeline"></div>
-              <h2 className="serif">2021</h2>
+              <h2 className="serif">2026</h2>
             </div>
           </div>
         </SwiperSlide>
@@ -143,7 +153,7 @@ const App = () => {
             <img src={womenTable} alt="mars" />
             <div className="projectInfo">
               <div className="timeline"></div>
-              <h2 className="serif">2022</h2>
+              <h2 className="serif">2028</h2>
             </div>
           </div>
         </SwiperSlide>
@@ -162,7 +172,7 @@ const App = () => {
             </p>
             <div className="projectInfo">
               <div className="timeline"></div>
-              <h2>2023</h2>
+              <h2>2030</h2>
             </div>
           </div>
         </SwiperSlide>
