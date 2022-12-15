@@ -28,8 +28,15 @@ body {
 .swiper-wrapper .swiper-slide {
   display: flex;
   align-items: center;
-  width: auto;
+  width: 50vw;
 }
+
+@media screen and (max-width: 500px) {
+  .swiper-wrapper .swiper-slide {
+    width: 100vw;
+  }
+}
+
 .swiper-slide img {
   max-width: 780px;
   max-height: 655px;
@@ -71,13 +78,13 @@ body {
 .thumbContainer video {
   display: block;
   position: relative;
-  max-width: calc(380px + 43vh);
+  max-width: 100%;
   max-height: calc(255px + 43vh);
 }
 
 .swiper-wrapper .first-slide {
   flex-direction: column;
-  width: 100vw;
+  width: 100vw !important;
 }
 
 .first-slide h1 {

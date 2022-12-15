@@ -1,12 +1,12 @@
 import { Fragment, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Mousewheel, Keyboard } from 'swiper';
-
 import 'swiper/css';
 
 import kurmandjan from './images/kurmandjan.png';
 import illustration1 from './images/illustration2.png';
-import mars from './images/mf-womenwork_chart.jpeg';
+import womenTable from './images/mf-womenwork_chart.jpeg';
+import mars from './images/mars.png';
 
 const isMobileOrTablet = function () {
   let check = false;
@@ -26,17 +26,11 @@ const isMobileOrTablet = function () {
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [swiper, setSwiper] = useState(null);
-  const [currentSlide, setCurrentSlide] = useState(null);
 
   useEffect(() => {
-    console.log('huy', isMobileOrTablet());
+    console.log('isMobileOrTablet', isMobileOrTablet());
     setIsMobile(() => isMobileOrTablet());
   }, []);
-
-  const onSlideChange = (swiper) => {
-    setCurrentSlide(swiper.realIndex);
-  };
 
   const onSwiper = (swiper) => {
     console.log(swiper);
@@ -46,11 +40,11 @@ const App = () => {
   return (
     <Fragment>
       <Swiper
+        className="swiper-container"
         modules={[FreeMode, Mousewheel, Keyboard]}
         loopedSlides={5}
         loop={true}
         slidesPerView="auto"
-        className="swiper-container"
         grabCursor="true"
         keyboard={{
           enabled: true,
@@ -59,18 +53,43 @@ const App = () => {
         freeMode={{
           enabled: true,
           momentum: true,
-
-          // momentumBounce: false,
-          // minimumVelocity: 0.001,
         }}
         mousewheel={true}
-        onRealIndexChange={onSlideChange}
         onSwiper={onSwiper}
       >
-        <div className="swiper-slide first-slide"></div>
+        {/* BREAK */}
+        <SwiperSlide>
+          <div className="thumbContainer">
+            <div className="projectInfo">
+              <div className="timeline"></div>
+              <h2 className="serif">Break</h2>
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* PAST EVENTS */}
+        <SwiperSlide>
+          <div className="thumbContainer">
+            <img src={mars} alt="kurmanjan" />
+
+            <div className="projectInfo">
+              <div className="timeline"></div>
+              <h2 className="serif">1986</h2>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="thumbContainer">
+            <img src={mars} alt="kurmanjan" />
+
+            <div className="projectInfo">
+              <div className="timeline"></div>
+              <h2 className="serif">1990</h2>
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* MAIN SLIDE */}
         <SwiperSlide className="swiper-slide first-slide">
           <h1>152 years history</h1>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -98,9 +117,12 @@ const App = () => {
           </svg>
           <p>{!isMobile ? 'Scroll up/down' : 'Swipe left/right'}</p>
         </SwiperSlide>
+
+        {/* FUTURE EVENTS */}
         <SwiperSlide>
           <div className="thumbContainer">
-            <img src={kurmandjan} />
+            <img src={kurmandjan} alt="kurmanjan" />
+
             <div className="projectInfo">
               <div className="timeline"></div>
               <h2 className="serif">2020</h2>
@@ -109,7 +131,7 @@ const App = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="thumbContainer">
-            <img src={illustration1} />
+            <img src={illustration1} alt="illustration" />
             <div className="projectInfo">
               <div className="timeline"></div>
               <h2 className="serif">2021</h2>
@@ -118,7 +140,7 @@ const App = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="thumbContainer">
-            <img src={mars} />
+            <img src={womenTable} alt="mars" />
             <div className="projectInfo">
               <div className="timeline"></div>
               <h2 className="serif">2022</h2>
@@ -127,10 +149,20 @@ const App = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="thumbContainer">
-            Some another content here
+            <h2>Some another content here</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop{' '}
+            </p>
             <div className="projectInfo">
               <div className="timeline"></div>
-              <h2 className="serif">2023</h2>
+              <h2>2023</h2>
             </div>
           </div>
         </SwiperSlide>
