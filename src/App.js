@@ -1,12 +1,10 @@
+/* eslint-disable no-useless-escape */
 import { Fragment, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Mousewheel, Keyboard } from 'swiper';
 import 'swiper/css';
-
-import kurmandjan from './images/kurmandjan.png';
-import illustration1 from './images/illustration2.png';
-import womenTable from './images/mf-womenwork_chart.jpeg';
-import mars from './images/mars.png';
+import { PAST_EVENTS } from './index';
+import { FUTURE_EVENTS } from './index';
 
 const isMobileOrTablet = function () {
   let check = false;
@@ -29,6 +27,7 @@ const App = () => {
 
   useEffect(() => {
     console.log('isMobileOrTablet', isMobileOrTablet());
+    console.log(PAST_EVENTS);
     setIsMobile(() => isMobileOrTablet());
   }, []);
 
@@ -43,7 +42,7 @@ const App = () => {
         speed={1200}
         className="swiper-container"
         modules={[FreeMode, Mousewheel, Keyboard]}
-        loopedSlides={5}
+        loopedSlides={15}
         loop={true}
         slidesPerView="auto"
         grabCursor="true"
@@ -60,6 +59,9 @@ const App = () => {
         {/* BREAK */}
         <SwiperSlide>
           <div className="thumbContainer">
+            <div>
+              <a href="./sources.html">List of sources</a>
+            </div>
             <div className="projectInfo">
               <div className="timeline"></div>
               <h2 className="serif">Break</h2>
@@ -67,26 +69,28 @@ const App = () => {
           </div>
         </SwiperSlide>
         {/* PAST EVENTS */}
-        <SwiperSlide>
-          <div className="thumbContainer">
-            <img src={mars} alt="kurmanjan" />
+        {PAST_EVENTS.map((event) => (
+          <SwiperSlide key={`past-${event.id}`}>
+            <div className="thumbContainer">
+              <p
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {event.title}
+              </p>
+              <img src={event.image} alt="Event in timeline" />
 
-            <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2 className="serif">1986</h2>
+              <div className="projectInfo">
+                <div className="timeline"></div>
+                <h2 className="serif">{event.year}</h2>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="thumbContainer">
-            <img src={mars} alt="kurmanjan" />
+          </SwiperSlide>
+        ))}
 
-            <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2 className="serif">1990</h2>
-            </div>
-          </div>
-        </SwiperSlide>
         {/* MAIN SLIDE */}
         <SwiperSlide className="swiper-slide first-slide">
           <h1>Gender equality in 152 years</h1>
@@ -127,18 +131,17 @@ const App = () => {
               viewBox="0 0 18 17"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns="http://www.w3.org/1999/xlink"
             >
               <g
                 id="prev"
                 transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)"
               >
                 <polygon
-                  class="arrow"
+                  className="arrow"
                   points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
                 ></polygon>
                 <polygon
-                  class="arrow-fixed"
+                  className="arrow-fixed"
                   points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
                 ></polygon>
                 <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -154,15 +157,16 @@ const App = () => {
               viewBox="-1 0 18 17"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns="http://www.w3.org/1999/xlink"
+              // eslint-disable-next-line react/jsx-no-duplicate-props
+              // xmlns="http://www.w3.org/1999/xlink"
             >
               <g>
                 <polygon
-                  class="arrow"
+                  className="arrow"
                   points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
                 ></polygon>
                 <polygon
-                  class="arrow-fixed"
+                  className="arrow-fixed"
                   points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
                 ></polygon>
                 <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -170,55 +174,36 @@ const App = () => {
             </svg>
           </div>
         </SwiperSlide>
-
         {/* FUTURE EVENTS */}
-        <SwiperSlide>
-          <div className="thumbContainer">
-            <img src={kurmandjan} alt="kurmanjan" />
+        {FUTURE_EVENTS.map((event) => (
+          <SwiperSlide key={`future-${event.id}`}>
+            <div className="thumbContainer">
+              <p
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {event.title}
+              </p>
+              <img src={event.image} alt="Event in timeline" />
 
-            <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2 className="serif">2024</h2>
+              <div className="projectInfo">
+                {event.year ? (
+                  <div className="timeline"></div>
+                ) : (
+                  <div className="timeline absent"></div>
+                )}
+                {event.year ? (
+                  <h2 className="serif">{event.year}</h2>
+                ) : (
+                  <h2 className="serif">&nbsp;</h2>
+                )}
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="thumbContainer">
-            <img src={illustration1} alt="illustration" />
-            <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2 className="serif">2026</h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="thumbContainer">
-            <img src={womenTable} alt="mars" />
-            <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2 className="serif">2028</h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="thumbContainer">
-            <h2>Some another content here</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop{' '}
-            </p>
-            <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2>2030</h2>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Fragment>
   );
