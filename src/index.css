@@ -42,21 +42,26 @@ svg.actionHint {
   cursor: pointer;
   overflow: visible;
 }
+
 svg.actionHint polygon,
 svg.actionHint path {
   transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
 }
+
 svg.actionHint polygon,
 svg.actionHint path {
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
   fill: #000;
 }
+
 svg.actionHint .arrow {
   animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
 }
+
 svg.actionHint .arrow-fixed {
   animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
 }
+
 @keyframes arrow-anim {
   0% {
     opacity: 1;
@@ -70,6 +75,7 @@ svg.actionHint .arrow-fixed {
     opacity: 0;
   }
 }
+
 @keyframes arrow-fixed-anim {
   5% {
     opacity: 0;
@@ -102,7 +108,7 @@ svg.actionHint .arrow-fixed {
   width: 50vw;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .swiper-wrapper .swiper-slide {
     width: 100vw;
   }
@@ -123,17 +129,21 @@ svg.actionHint .arrow-fixed {
   bottom: 1px;
   left: 0;
 }
+
 .projectInfo h2 {
   margin: 0;
 }
+
 .projectInfo h3 {
   margin: 8px 8px 8px 0;
 }
+
 .projectInfo .category,
 .projectInfo .medium {
   text-transform: none;
   opacity: 0.4;
 }
+
 .projectInfo .medium {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 100px;
@@ -145,12 +155,19 @@ svg.actionHint .arrow-fixed {
   margin: auto;
   opacity: 1;
 }
-.thumbContainer img,
-.thumbContainer video {
+
+@media screen and (max-width: 700px) {
+  .thumbContainer {
+    padding: 0 20px;
+  }
+}
+
+.thumbContainer img {
   display: block;
   position: relative;
   max-width: 100%;
   max-height: calc(255px + 43vh);
+  padding-left: 40px;
 }
 
 .swiper-wrapper .first-slide {
@@ -198,6 +215,7 @@ svg.actionHint .arrow-fixed {
     transform: translateY(100px);
   }
 }
+
 @keyframes scroll {
   0% {
     transform: translateY(0);
@@ -206,6 +224,7 @@ svg.actionHint .arrow-fixed {
     transform: translateY(100px);
   }
 }
+
 svg #wheel {
   -webkit-animation: scroll ease 1.5s infinite;
   animation: scroll ease 1.5s infinite;
@@ -223,9 +242,11 @@ svg #wheel {
 .left {
   left: 50px;
 }
+
 .right {
   right: 50px;
 }
+
 div.timeline.absent::after {
   display: none;
 }
