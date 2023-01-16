@@ -121,18 +121,21 @@ svg.actionHint .arrow-fixed {
 }
 
 .projectInfo {
-  margin: 14px 0 13px 0;
+  /* margin: 14px 0 13px 0; */
+  padding-bottom: 14px;
   position: absolute;
   z-index: 1;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
-  bottom: 1px;
+  bottom: 0px;
   left: 0;
+  background: #281d42;
 }
 
 .projectInfo h2 {
   margin: 3px;
+  color: white;
 }
 
 .projectInfo h3 {
@@ -229,7 +232,7 @@ a:active {
 }
 
 .timeline {
-  border-top: 4px solid rgb(49 49 49 / 86%);
+  border-top: 4px solid #241840;
   margin-bottom: 12px;
 }
 
@@ -243,7 +246,7 @@ a:active {
   border: 1px solid rgb(49 49 49 / 86%);
   background-color: #f5f2e6;
   transition: background-color 0.3s;
-  bottom: 37px;
+  bottom: 50px;
   left: 50%;
 }
 
@@ -352,6 +355,32 @@ div.timeline.absent::after {
 .swiper-slide[data-swiper-slide-index='1'] .thumbContainer {
   background-color: rgb(200, 200, 200);
 }
+
+.swiper-slide[data-swiper-slide-index='14'] .thumbContainer {
+  background-color: rgba(194, 165, 255, 0.447);
+}
+.swiper-slide[data-swiper-slide-index='16'] .thumbContainer {
+  background-color: rgba(181, 149, 250, 0.447);
+}
+.swiper-slide[data-swiper-slide-index='18'] .thumbContainer {
+  background-color: rgba(178, 152, 252, 0.447);
+}
+.swiper-slide[data-swiper-slide-index='20'] .thumbContainer {
+  background-color: rgba(170, 147, 253, 0.447);
+}
+.swiper-slide[data-swiper-slide-index='22'] .thumbContainer {
+  background-color: rgba(161, 135, 255, 0.447);
+}
+.swiper-slide[data-swiper-slide-index='24'] .thumbContainer {
+  background-color: rgba(149, 109, 250, 0.447);
+}
+
 .swiper-slide[data-swiper-slide-index='25'] .thumbContainer {
   background-color: rgb(255 118 101 / 99%);
+}
+
+@media screen and (max-width: 700px) {
+  .burqa img {
+    padding-bottom: 82px;
+  }
 }

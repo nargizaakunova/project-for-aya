@@ -71,7 +71,7 @@ const App = () => {
         {/* PAST EVENTS */}
         {PAST_EVENTS.map((event) => (
           <SwiperSlide key={`past-${event.id}`}>
-            <div className="thumbContainer past">
+            <div className={`thumbContainer past ${event.className || ''}`}>
               <p
                 style={{
                   display: 'flex',

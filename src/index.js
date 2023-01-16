@@ -65,6 +65,7 @@ export const PAST_EVENTS = [
     year: 1927,
     title: 'Central Asian women burn their burqa',
     image: IMAGES.burqa,
+    className: 'burqa',
   },
   {
     id: 'k6',
