@@ -134,6 +134,7 @@ const App = () => {
           <p>{!isMobile ? 'Scroll up/down' : 'Swipe left/right'}</p>
 
           <svg
+            className="girl-animation"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 800 400"

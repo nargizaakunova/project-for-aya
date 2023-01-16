@@ -392,6 +392,11 @@ div.timeline.absent::after {
   }
 }
 
+.girl-animation {
+  position: relative;
+  left: 30px;
+}
+
 @-webkit-keyframes large-wave {
   from {
     -webkit-transform: rotate(0deg);
