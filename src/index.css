@@ -225,10 +225,27 @@ a:active {
 
 .first-slide h1 {
   text-align: center;
-  font-size: 60px;
-  line-height: 1.4;
+  font-size: 36px;
+  line-height: 1.2;
   width: 100%;
   margin-top: 100px;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 0 30%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .description {
+    font-size: 14px;
+    padding: 0 20%;
+  }
 }
 
 .timeline {
@@ -390,98 +407,4 @@ div.timeline.absent::after {
   .burqa img {
     padding-bottom: 82px;
   }
-}
-
-.girl-animation {
-  position: relative;
-  left: 30px;
-}
-
-@-webkit-keyframes large-wave {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-15deg);
-  }
-}
-
-@-webkit-keyframes medium-wave {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-12deg);
-  }
-}
-
-@-webkit-keyframes small-wave {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-10deg);
-  }
-}
-
-@keyframes large-wave {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-15deg);
-  }
-}
-
-@keyframes medium-wave {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-12deg);
-  }
-}
-
-@keyframes small-wave {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-10deg);
-  }
-}
-
-.middle {
-  -webkit-animation: medium-wave 5.5s infinite alternate;
-  animation: medium-wave 5.5s infinite alternate;
-}
-
-.bottom {
-  -webkit-animation: small-wave 6s infinite alternate;
-  animation: small-wave 6s infinite alternate;
-}
-
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.wind {
-  stroke-dasharray: 100;
-  opacity: 0.25;
-  -webkit-animation: dash 35s linear infinite;
-  animation: dash 35s linear infinite;
 }
