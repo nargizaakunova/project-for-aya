@@ -58,20 +58,20 @@ const App = () => {
       >
         {/* BREAK */}
         <SwiperSlide>
-          <div className="thumbContainer">
+          <div className="thumbContainer sources">
             <div>
               <a href="./sources.html">List of sources</a>
             </div>
-            <div className="projectInfo">
+            {/* <div className="projectInfo">
               <div className="timeline"></div>
               <h2 className="serif">Break</h2>
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
         {/* PAST EVENTS */}
         {PAST_EVENTS.map((event) => (
           <SwiperSlide key={`past-${event.id}`}>
-            <div className="thumbContainer">
+            <div className="thumbContainer past">
               <p
                 style={{
                   display: 'flex',
@@ -83,17 +83,21 @@ const App = () => {
               </p>
               <img src={event.image} alt="Event in timeline" />
 
-              <div className="projectInfo">
+              {/* <div className="projectInfo">
                 <div className="timeline"></div>
                 <h2 className="serif">{event.year}</h2>
-              </div>
+              </div> */}
+            </div>
+            <div className="projectInfo">
+              <div className="timeline"></div>
+              <h2 className="serif">{event.year}</h2>
             </div>
           </SwiperSlide>
         ))}
 
         {/* MAIN SLIDE */}
         <SwiperSlide className="swiper-slide first-slide">
-          <h1>Gender equality in 152 years</h1>
+          <h1>Gender equality</h1>
 
           <svg
             className={isMobile ? 'rotate90degrees' : ''}
@@ -177,19 +181,11 @@ const App = () => {
         {/* FUTURE EVENTS */}
         {FUTURE_EVENTS.map((event) => (
           <SwiperSlide key={`future-${event.id}`}>
-            <div className="thumbContainer">
-              <p
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                {event.title}
-              </p>
+            <div className={`thumbContainer ${event.className || 'future'}`}>
+              <p>{event.title}</p>
               <img src={event.image} alt="Event in timeline" />
 
-              <div className="projectInfo">
+              {/* <div className="projectInfo">
                 {event.year ? (
                   <div className="timeline"></div>
                 ) : (
@@ -200,7 +196,19 @@ const App = () => {
                 ) : (
                   <h2 className="serif">&nbsp;</h2>
                 )}
-              </div>
+              </div> */}
+            </div>
+            <div className="projectInfo">
+              {event.year ? (
+                <div className="timeline"></div>
+              ) : (
+                <div className="timeline absent"></div>
+              )}
+              {event.year ? (
+                <h2 className="serif">{event.year}</h2>
+              ) : (
+                <h2 className="serif">&nbsp;</h2>
+              )}
             </div>
           </SwiperSlide>
         ))}

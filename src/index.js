@@ -109,6 +109,7 @@ export const FUTURE_EVENTS = [
     id: 'k1-1',
     year: ``,
     image: IMAGES.graphic1,
+    className: 'graphic',
   },
   {
     id: 'k2',
@@ -120,6 +121,7 @@ export const FUTURE_EVENTS = [
     id: 'k2-1',
     year: ``,
     image: IMAGES.graphic2,
+    className: 'graphic',
   },
   {
     id: 'k3',
@@ -132,6 +134,7 @@ export const FUTURE_EVENTS = [
     id: 'k3-1',
     year: ``,
     image: IMAGES.graphic3,
+    className: 'graphic',
   },
   {
     id: 'k4',
@@ -144,6 +147,7 @@ export const FUTURE_EVENTS = [
     id: 'k4-1',
     year: ``,
     image: IMAGES.graphic4,
+    className: 'graphic',
   },
   {
     id: 'k5',
@@ -156,6 +160,7 @@ export const FUTURE_EVENTS = [
     id: 'k5-1',
     year: ``,
     image: IMAGES.graphic5,
+    className: 'graphic',
   },
   {
     id: 'k6',
@@ -168,6 +173,7 @@ export const FUTURE_EVENTS = [
     id: 'k6-1',
     year: ``,
     image: IMAGES.graphic6,
+    className: 'graphic',
   },
   {
     id: 'k7',
