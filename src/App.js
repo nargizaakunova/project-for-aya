@@ -24,16 +24,22 @@ const isMobileOrTablet = function () {
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [swiperInst, setSwiperInst] = useState(null);
 
   useEffect(() => {
-    console.log('isMobileOrTablet', isMobileOrTablet());
-    console.log(PAST_EVENTS);
     setIsMobile(() => isMobileOrTablet());
   }, []);
 
   const onSwiper = (swiper) => {
-    console.log(swiper);
-    swiper.slideTo(0);
+    setSwiperInst(swiper);
+    swiper.slideTo(26, 0);
+  };
+
+  const scrollLeftHandler = () => {
+    swiperInst.slideTo(swiperInst.activeIndex - 1);
+  };
+  const scrollRightHandler = () => {
+    swiperInst.slideTo(swiperInst.activeIndex + 1);
   };
 
   return (
@@ -405,7 +411,7 @@ const App = () => {
             ></use>
           </svg>
 
-          <div className="left">
+          <div className="left" onClick={scrollLeftHandler}>
             <p> Past</p>
             <svg
               className="actionHint"
@@ -431,7 +437,7 @@ const App = () => {
               </g>
             </svg>
           </div>
-          <div className="right">
+          <div className="right" onClick={scrollRightHandler}>
             <p>Future</p>
             <svg
               className="actionHint"
