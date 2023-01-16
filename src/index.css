@@ -384,3 +384,92 @@ div.timeline.absent::after {
     padding-bottom: 82px;
   }
 }
+
+@-webkit-keyframes large-wave {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-15deg);
+  }
+}
+
+@-webkit-keyframes medium-wave {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-12deg);
+  }
+}
+
+@-webkit-keyframes small-wave {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+
+@keyframes large-wave {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes medium-wave {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-12deg);
+  }
+}
+
+@keyframes small-wave {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+
+.middle {
+  -webkit-animation: medium-wave 5.5s infinite alternate;
+  animation: medium-wave 5.5s infinite alternate;
+}
+
+.bottom {
+  -webkit-animation: small-wave 6s infinite alternate;
+  animation: small-wave 6s infinite alternate;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.wind {
+  stroke-dasharray: 100;
+  opacity: 0.25;
+  -webkit-animation: dash 35s linear infinite;
+  animation: dash 35s linear infinite;
+}
