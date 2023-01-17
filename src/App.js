@@ -59,7 +59,7 @@ const App = () => {
         freeMode={{
           enabled: true,
         }}
-        mousewheel={false}
+        mousewheel={true}
         onSwiper={onSwiper}
       >
         {/* BREAK */}
