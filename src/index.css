@@ -253,7 +253,7 @@ a:active {
   margin-bottom: 12px;
 }
 
-.timeline::after {
+/* .timeline::after {
   content: '';
   position: absolute;
   transform: translateX(-50%);
@@ -268,12 +268,15 @@ a:active {
 }
 
 .swiper-slide-active .timeline::after {
-  /* background-color: #ffeda1; */
   background-color: #8c52ff;
-  /* border-color: #ffeda1; */
   border-color: #8c52ff;
-}
+} */
 
+.swiper-slide-active h2 {
+  color: #d0bffd;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
 /* animation */
 @-webkit-keyframes scroll {
   0% {
