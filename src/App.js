@@ -25,6 +25,7 @@ const isMobileOrTablet = function () {
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [swiperInst, setSwiperInst] = useState(null);
+  const [initialProgress, setInitialProgress] = useState(null);
 
   useEffect(() => {
     setIsMobile(() => isMobileOrTablet());
@@ -36,10 +37,60 @@ const App = () => {
   };
 
   const scrollLeftHandler = () => {
+    setInitialProgress(swiperInst.progress);
     swiperInst.slideTo(swiperInst.activeIndex - 1);
+    swiperInst.mousewheel.enable();
   };
   const scrollRightHandler = () => {
+    setInitialProgress(swiperInst.progress);
     swiperInst.slideTo(swiperInst.activeIndex + 1);
+    swiperInst.mousewheel.enable();
+  };
+
+  const onScroll = (event) => {
+    // console.log(event);
+    if (
+      event.target.scrollTop + event.target.clientHeight + 50 >=
+      event.target.scrollHeight
+    ) {
+      console.log('enable that shit');
+      console.log('initialProgress', swiperInst.progress);
+      setInitialProgress(swiperInst.progress);
+      if (!swiperInst.mousewheel.enabled) {
+        swiperInst.mousewheel.enable();
+      }
+    }
+    if (event.target.scrollTop === 0) {
+      console.log('enabled');
+
+      if (!swiperInst.mousewheel.enabled) {
+        swiperInst.mousewheel.enable();
+      }
+    }
+  };
+
+  const onSliderScroll = (swiper) => {
+    console.log(swiper);
+    const scrollableContent = swiper.slides[swiper.activeIndex].querySelector(
+      '.scrollable-content'
+    );
+
+    if (initialProgress >= swiper.progress && scrollableContent) {
+      if (scrollableContent.scrollTop !== 0) {
+        swiper.slideTo(26, 0);
+        console.log('disable that shit on scroll');
+        swiper.mousewheel.disable();
+      }
+
+      if (
+        scrollableContent.scrollTop === 0 &&
+        swiper.translate < swiper.previousTranslate
+      ) {
+        swiper.slideTo(26, 200);
+        console.log('disable that shit on scroll');
+        swiper.mousewheel.disable();
+      }
+    }
   };
 
   return (
@@ -59,8 +110,9 @@ const App = () => {
         freeMode={{
           enabled: true,
         }}
-        mousewheel={true}
+        mousewheel={false}
         onSwiper={onSwiper}
+        onScroll={onSliderScroll}
       >
         {/* BREAK */}
         <SwiperSlide>
@@ -103,41 +155,66 @@ const App = () => {
 
         {/* MAIN SLIDE */}
         <SwiperSlide className="swiper-slide first-slide">
-          <h1>When Kyrgyzstan will close the Gender Pay Gap?</h1>
-          <p className="description">
-            Gender pay gap is a difference between average annual earnings of
-            women and men. According to the Global Gender Gap Report 2022,
-            Central Asia will close the gender gap in 152 years. Let’s see what
-            happened in 152 years in the past and what will happen in the
-            future.
-          </p>
-          <svg
-            className={isMobile ? 'rotate90degrees' : ''}
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            fillRule="evenodd"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeMiterlimit="1.5"
-            clipRule="evenodd"
-            viewBox="0 0 247 390"
-          >
-            <path
-              id="wheel"
-              fill="none"
-              stroke="#000"
-              strokeWidth="20"
-              d="M123.359 79.775v72.843"
-            ></path>
-            <path
-              id="mouse"
-              fill="none"
-              stroke="#000"
-              strokeWidth="20"
-              d="M236.717 123.359C236.717 60.794 185.923 10 123.359 10 60.794 10 10 60.794 10 123.359v143.237c0 62.565 50.794 113.359 113.359 113.359 62.564 0 113.358-50.794 113.358-113.359V123.359z"
-            ></path>
-          </svg>
-          <p>{!isMobile ? 'Scroll up/down' : 'Swipe left/right'}</p>
+          <div className="scrollable-content" onScroll={onScroll}>
+            <h1>When Kyrgyzstan will close the Gender Pay Gap?</h1>
+
+            <svg
+              className={isMobile ? 'rotate90degrees' : ''}
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              fillRule="evenodd"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeMiterlimit="1.5"
+              clipRule="evenodd"
+              viewBox="0 0 247 390"
+            >
+              <path
+                id="wheel"
+                fill="none"
+                stroke="#000"
+                strokeWidth="20"
+                d="M123.359 79.775v72.843"
+              ></path>
+              <path
+                id="mouse"
+                fill="none"
+                stroke="#000"
+                strokeWidth="20"
+                d="M236.717 123.359C236.717 60.794 185.923 10 123.359 10 60.794 10 10 60.794 10 123.359v143.237c0 62.565 50.794 113.359 113.359 113.359 62.564 0 113.358-50.794 113.358-113.359V123.359z"
+              ></path>
+            </svg>
+            <p>{!isMobile ? 'Scroll up/down' : 'Swipe left/right'}</p>
+
+            <p className="description">
+              Gender pay gap is a difference between average annual earnings of
+              women and men. According to the Global Gender Gap Report 2022,
+              Central Asia will close the gender gap in 152 years. Let’s see
+              what happened in 152 years in the past and what will happen in the
+              future.
+            </p>
+            <p className="description">
+              Gender pay gap is a difference between average annual earnings of
+              women and men. According to the Global Gender Gap Report 2022,
+              Central Asia will close the gender gap in 152 years. Let’s see
+              what happened in 152 years in the past and what will happen in the
+              future.
+            </p>
+            <p className="description">
+              Gender pay gap is a difference between average annual earnings of
+              women and men. According to the Global Gender Gap Report 2022,
+              Central Asia will close the gender gap in 152 years. Let’s see
+              what happened in 152 years in the past and what will happen in the
+              future.
+            </p>
+            <p className="description">
+              Gender pay gap is a difference between average annual earnings of
+              women and men. According to the Global Gender Gap Report 2022,
+              Central Asia will close the gender gap in 152 years. Let’s see
+              what happened in 152 years in the past and what will happen in the
+              future.
+            </p>
+          </div>
 
           <div className="left" onClick={scrollLeftHandler}>
             <p> Past</p>
