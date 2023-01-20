@@ -167,6 +167,7 @@ svg.actionHint .arrow-fixed {
   border-top: 0;
   border-bottom: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .thumbContainer p {

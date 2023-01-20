@@ -112,7 +112,7 @@ const App = () => {
           enabled: true,
           momentumBounce: false,
         }}
-        cssMode={true}
+        cssMode={isMobile}
         mousewheel={false}
         onSwiper={onSwiper}
         onScroll={onSliderScroll}
