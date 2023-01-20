@@ -417,7 +417,7 @@ a:active {
   }
   .genderQuota img {
     padding-bottom: unset;
-    bottom: -14px;
+    bottom: -6px;
   }
   .kulak img {
     width: 82%;
@@ -468,6 +468,9 @@ a:active {
     top: -13%;
   }
 
+  .burqa p {
+    padding: 120px 15px 0;
+  }
   .burqa img {
     width: 342px;
   }
