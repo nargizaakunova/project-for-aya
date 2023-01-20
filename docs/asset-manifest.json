@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.6eaead62.css",
-    "main.js": "./static/js/main.58aa0847.js",
-    "static/media/womenSatellite.png": "./static/media/womenSatellite.644a43064838786a03eb.png",
+    "main.css": "./static/css/main.c618b0a7.css",
+    "main.js": "./static/js/main.d4a76fd7.js",
+    "static/media/womenSatellite.jpeg": "./static/media/womenSatellite.5b66636a0815d77cdb2e.jpeg",
     "static/media/zoo.png": "./static/media/zoo.3aa5066bf88e36cc3e92.png",
     "static/media/abortions.png": "./static/media/abortions.18b7a4353a4bd4ea96bc.png",
     "static/media/Artemis.png": "./static/media/Artemis.c8100bd1e985def9ecd9.png",
@@ -27,11 +27,11 @@
     "static/media/16.png": "./static/media/16.cf29a9eb1697a2155dba.png",
     "static/media/Gender_Gap_closed_in_Kyrgyzstan.png": "./static/media/Gender_Gap_closed_in_Kyrgyzstan.83e1e26c75a22ddb7c28.png",
     "index.html": "./index.html",
-    "main.6eaead62.css.map": "./static/css/main.6eaead62.css.map",
-    "main.58aa0847.js.map": "./static/js/main.58aa0847.js.map"
+    "main.c618b0a7.css.map": "./static/css/main.c618b0a7.css.map",
+    "main.d4a76fd7.js.map": "./static/js/main.d4a76fd7.js.map"
   },
   "entrypoints": [
-    "static/css/main.6eaead62.css",
-    "static/js/main.58aa0847.js"
+    "static/css/main.c618b0a7.css",
+    "static/js/main.d4a76fd7.js"
   ]
 }
