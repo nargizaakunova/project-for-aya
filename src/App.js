@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Mousewheel, Keyboard } from 'swiper';
 import 'swiper/css';
@@ -22,14 +22,11 @@ const isMobileOrTablet = function () {
   return check;
 };
 
+const isMobile = isMobileOrTablet();
+
 const App = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [swiperInst, setSwiperInst] = useState(null);
   const [initialProgress, setInitialProgress] = useState(null);
-
-  useEffect(() => {
-    setIsMobile(() => isMobileOrTablet());
-  }, []);
 
   const onSwiper = (swiper) => {
     setSwiperInst(swiper);
@@ -48,21 +45,16 @@ const App = () => {
   };
 
   const onScroll = (event) => {
-    // console.log(event);
     if (
       event.target.scrollTop + event.target.clientHeight + 50 >=
       event.target.scrollHeight
     ) {
-      console.log('enable that shit');
-      console.log('initialProgress', swiperInst.progress);
       setInitialProgress(swiperInst.progress);
       if (!swiperInst.mousewheel.enabled) {
         swiperInst.mousewheel.enable();
       }
     }
     if (event.target.scrollTop === 0) {
-      console.log('enabled');
-
       if (!swiperInst.mousewheel.enabled) {
         swiperInst.mousewheel.enable();
       }
@@ -78,7 +70,6 @@ const App = () => {
     if (initialProgress >= swiper.progress && scrollableContent) {
       if (scrollableContent.scrollTop !== 0) {
         swiper.slideTo(26, 0);
-        console.log('disable that shit on scroll');
         swiper.mousewheel.disable();
       }
 
@@ -87,7 +78,6 @@ const App = () => {
         swiper.translate < swiper.previousTranslate
       ) {
         swiper.slideTo(26, 200);
-        console.log('disable that shit on scroll');
         swiper.mousewheel.disable();
       }
     }
