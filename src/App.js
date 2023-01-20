@@ -160,6 +160,7 @@ const App = () => {
 
             <svg
               className={isMobile ? 'rotate90degrees' : ''}
+              style={{ overflow: 'visible' }}
               xmlns="http://www.w3.org/2000/svg"
               width="40"
               fillRule="evenodd"
@@ -271,7 +272,7 @@ const App = () => {
         {/* FUTURE EVENTS */}
         {FUTURE_EVENTS.map((event) => (
           <SwiperSlide key={`future-${event.id}`}>
-            <div className={`thumbContainer ${event.className || 'future'}`}>
+            <div className={`thumbContainer future ${event.className || ''}`}>
               <p>{event.title}</p>
               <img src={event.image} alt="Event in timeline" />
 

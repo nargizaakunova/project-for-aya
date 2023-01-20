@@ -11,7 +11,7 @@ const IMAGES = {
   independence: require('./images/Past-visuals/independence.png'),
   rights: require('./images/Past-visuals/rights.png'),
   zoo: require('./images/Past-visuals/zoo.png'),
-  satellite: require('./images/Past-visuals/womenSatellite.png'),
+  satellite: require('./images/Past-visuals/womenSatellite.jpeg'),
   burqa: require('./images/Past-visuals/burqa.jpeg'),
   abortions: require('./images/Past-visuals/abortions.png'),
 
@@ -40,12 +40,14 @@ export const PAST_EVENTS = [
     year: 1865,
     title: 'Kurmanzhan Datka became the Queen of Alay',
     image: IMAGES.kurmandjan,
+    className: 'kurmandjan',
   },
   {
     id: 'k2',
     year: 1876,
     title: 'Russian Empire colonized the last Kyrgyz lands in the south',
     image: IMAGES.nikolay,
+    className: 'nikolay',
   },
   {
     id: 'k3',
@@ -53,12 +55,14 @@ export const PAST_EVENTS = [
     title:
       'Kyrgyz people in the Kyrgyz Exhibition in a "Human zoo" in Copenhagen',
     image: IMAGES.zoo,
+    className: 'zoo',
   },
   {
     id: 'k4',
     year: 1918,
     title: 'Soviet women gain their rights',
     image: IMAGES.rights,
+    className: 'rights',
   },
   {
     id: 'k5',
@@ -72,30 +76,35 @@ export const PAST_EVENTS = [
     year: 1955,
     title: 'Abortions allowed (again)',
     image: IMAGES.abortions,
+    className: 'abortions',
   },
   {
     id: 'k7',
     year: 1991,
     title: 'Independence',
     image: IMAGES.independence,
+    className: 'independence',
   },
   {
     id: 'k8',
     year: 2010,
     title: 'First woman president in Kyrgyzstan Roza Otunbaeva',
     image: IMAGES.otunbaeva,
+    className: 'otunbaeva',
   },
   {
     id: 'k9',
     year: 2018,
     title: "Young Women Started to Build Kyrgyzstan's First Satellite",
     image: IMAGES.satellite,
+    className: 'satellite',
   },
   {
     id: 'k10',
     year: 2022,
     title: "First ombudswoman in Kyrgyzstan's history",
     image: IMAGES.ombudswoman,
+    className: 'ombudswoman',
   },
 ];
 
@@ -105,88 +114,96 @@ export const FUTURE_EVENTS = [
     year: 2024,
     title: 'First women in the moon (Artemis program)',
     image: IMAGES.artemis,
+    className: 'artemis',
   },
-  {
-    id: 'k1-1',
-    year: ``,
-    image: IMAGES.graphic1,
-    className: 'graphic',
-  },
+  // {
+  //   id: 'k1-1',
+  //   year: ``,
+  //   image: IMAGES.graphic1,
+  //   className: 'graphic',
+  // },
   {
     id: 'k2',
     year: 2025,
     title: 'The average salary in Kyrgyzstan will be almost 30 thousand soms',
     image: IMAGES.soms,
+    className: 'pig',
   },
-  {
-    id: 'k2-1',
-    year: ``,
-    image: IMAGES.graphic2,
-    className: 'graphic',
-  },
+  // {
+  //   id: 'k2-1',
+  //   year: ``,
+  //   image: IMAGES.graphic2,
+  //   className: 'graphic',
+  // },
   {
     id: 'k3',
     year: 2029,
     title:
       '10 years since the adoption of the law on the 30% gender quota in local councils',
     image: IMAGES.genderQuota,
+    className: 'genderQuota',
   },
-  {
-    id: 'k3-1',
-    year: ``,
-    image: IMAGES.graphic3,
-    className: 'graphic',
-  },
+  // {
+  //   id: 'k3-1',
+  //   year: ``,
+  //   image: IMAGES.graphic3,
+  //   className: 'graphic',
+  // },
   {
     id: 'k4',
     year: 2043,
     title:
       'Laws to prevent violence against women and girls placed everywhere (+21 years) ',
     image: IMAGES.againstViolence,
+    className: 'kulak',
   },
-  {
-    id: 'k4-1',
-    year: ``,
-    image: IMAGES.graphic4,
-    className: 'graphic',
-  },
+  // {
+  //   id: 'k4-1',
+  //   year: ``,
+  //   image: IMAGES.graphic4,
+  //   className: 'graphic',
+  // },
   {
     id: 'k5',
     year: 2062,
     title:
       'Equal representation in national parliaments (globally) (+40 years)',
     image: IMAGES.equalRepresentationParliaments,
+    className: 'parliament',
   },
-  {
-    id: 'k5-1',
-    year: ``,
-    image: IMAGES.graphic5,
-    className: 'graphic',
-  },
+  // {
+  //   id: 'k5-1',
+  //   year: ``,
+  //   image: IMAGES.graphic5,
+  //   className: 'graphic',
+  // },
   {
     id: 'k6',
     year: 2162,
     title:
       'Equal representation in leadership positions in the workplace (globally) (+140 years)',
     image: IMAGES.equalRepresentationLeadership,
+    className: 'leadership',
   },
-  {
-    id: 'k6-1',
-    year: ``,
-    image: IMAGES.graphic6,
-    className: 'graphic',
-  },
+  // {
+  //   id: 'k6-1',
+  //   year: ``,
+  //   image: IMAGES.graphic6,
+  //   className: 'graphic',
+  // },
   {
     id: 'k7',
     year: 2174,
     title: 'Central Asia will close the gender gap',
     image: IMAGES.genderGap,
+    className: 'genderGap',
   },
   {
     id: 'k8',
     year: 2308,
     title: 'Gender equality achieved globally (+286 years)',
     image: IMAGES.genderEquality,
+    className: 'unicorn',
   },
 ];
 
