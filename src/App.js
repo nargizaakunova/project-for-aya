@@ -96,6 +96,7 @@ const App = () => {
   return (
     <Fragment>
       <Swiper
+        longSwipes={false}
         speed={1200}
         className="swiper-container"
         modules={[FreeMode, Mousewheel, Keyboard]}
@@ -109,6 +110,7 @@ const App = () => {
         }}
         freeMode={{
           enabled: true,
+          momentumBounce: false,
         }}
         mousewheel={false}
         onSwiper={onSwiper}
