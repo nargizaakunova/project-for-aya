@@ -790,8 +790,116 @@ a:active {
   }
 }
 
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 1024px) {
+@media (max-width: 800px) and (orientation: landscape) {
+  /*  */
+  .thumbContainer p {
+    padding: 65px 30px 0;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    height: 20%;
+    font-size: 18px;
+    width: 370px;
+  }
+  .thumbContainer img {
+    width: 25%;
+  }
+  /* Future */
+  .artemis p {
+  }
+  .artemis img {
+  }
+  .pig p {
+  }
+  .pig img {
+  }
+  .genderQuota img {
+    padding-bottom: unset;
+    bottom: 35px;
+  }
+  .kulak img {
+    width: 47%;
+  }
+  .parliament img {
+    bottom: -12px;
+  }
+  .leadership img {
+    bottom: -40px;
+  }
+  .genderGap img {
+    bottom: -6px;
+  }
+  .unicorn img {
+  }
+  /*  */
+  /*  */
+  /* Past */
+  .kurmandjan img {
+  }
+  .nikolay img {
+  }
+  .zoo p {
+    position: absolute;
+    top: -3%;
+    display: unset;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .zoo img {
+    width: 45%;
+    right: 30px;
+    position: absolute;
+    margin-right: unset;
+  }
+
+  .rights p {
+    position: absolute;
+    bottom: 18%;
+    display: unset;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .rights img {
+    width: 45%;
+    right: 30px;
+    position: absolute;
+    margin-right: unset;
+  }
+  .burqa p {
+    padding: 50px 30px 0;
+  }
+  .burqa img {
+    width: 20%;
+    position: absolute;
+    left: 120px;
+  }
+  .abortions img {
+    width: 28%;
+  }
+  .independence img {
+    width: 33%;
+  }
+  .otunbaeva img {
+  }
+  .satellite p {
+    padding: 40px 30px 0;
+    width: 600px;
+  }
+  .satellite img {
+    width: 100%;
+    object-fit: cover;
+    height: 76%;
+  }
+  .ombudswoman p {
+    width: 380px;
+    margin-left: auto;
+    padding: 50px 30px 0;
+  }
+  .ombudswoman img {
+    margin-left: unset;
+    width: 28%;
+  }
 }
 
 .swiper-wrapper .first-slide {
