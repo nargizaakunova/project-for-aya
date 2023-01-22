@@ -165,7 +165,7 @@ svg.actionHint .arrow-fixed {
   /* padding: 0 24px; */
   display: flex;
   flex-direction: column;
-  border: 5px solid #000000;
+  /* border: 5px solid #000000; */
   border-top: 0;
   border-bottom: 0;
   position: relative;
