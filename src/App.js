@@ -28,7 +28,7 @@ const App = () => {
   const [swiperInst, setSwiperInst] = useState(null);
   const [initialProgress, setInitialProgress] = useState(null);
 
-  const mainPageIndex = isMobile ? 12 : 31;
+  const mainPageIndex = isMobile ? 11 : 30;
 
   const onSwiper = (swiper) => {
     setSwiperInst(swiper);
@@ -108,15 +108,6 @@ const App = () => {
         onSwiper={onSwiper}
         onScroll={onSliderScroll}
       >
-        {/* BREAK */}
-        <SwiperSlide>
-          <div className="thumbContainer sources">
-            <div>
-              <a href="./sources.html">List of sources</a>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/* PAST EVENTS */}
         {PAST_EVENTS.map((event) => (
           <SwiperSlide key={`past-${event.id}`}>
             <div className={`thumbContainer past ${event.className || ''}`}>
@@ -275,6 +266,15 @@ const App = () => {
             </div>
           </SwiperSlide>
         ))}
+        {/* BREAK */}
+        <SwiperSlide>
+          <div className="thumbContainer sources">
+            <div>
+              <a href="./sources.html">List of sources</a>
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* PAST EVENTS */}
       </Swiper>
     </Fragment>
   );
