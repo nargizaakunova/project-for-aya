@@ -231,7 +231,8 @@ a:active {
   .graphicImage {
     width: 100%;
     object-fit: contain;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     max-height: 600px !important;
   }
   img.graphicImage:last-child {
@@ -322,7 +323,8 @@ a:active {
   .graphicImage {
     width: 100%;
     object-fit: contain;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     max-height: 440px !important;
   }
   img.graphicImage:last-child {
@@ -417,6 +419,7 @@ a:active {
     width: 100%;
     object-fit: contain;
     margin-bottom: 40px;
+    margin-top: 40px;
     max-height: 310px !important;
   }
   img.graphicImage:last-child {
@@ -936,7 +939,7 @@ a:active {
 .swiper-wrapper .first-slide {
   width: 100vw !important;
   /* background-color: #fff !important; */
-  animation: mainPageColors 8s ease-in infinite alternate;
+  animation: mainPageColors 20s ease-in infinite alternate;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1265,10 +1268,7 @@ button.go-to-main {
   0% {
     background-color: #fff;
   }
-  50% {
-    background-color: #fbe9d7;
-  }
   100% {
-    background-color: #f6d5f7;
+    background-color: #bde0fe;
   }
 }
