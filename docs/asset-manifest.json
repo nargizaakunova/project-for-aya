@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.84a56d56.css",
-    "main.js": "./static/js/main.0a282b64.js",
+    "main.css": "./static/css/main.af395741.css",
+    "main.js": "./static/js/main.65686013.js",
     "static/media/womenSatellite.jpeg": "./static/media/womenSatellite.5b66636a0815d77cdb2e.jpeg",
     "static/media/zoo.png": "./static/media/zoo.3aa5066bf88e36cc3e92.png",
     "static/media/abortions.png": "./static/media/abortions.18b7a4353a4bd4ea96bc.png",
@@ -14,24 +14,23 @@
     "static/media/otunbaeva.png": "./static/media/otunbaeva.ddae3e72dfb593a26cd4.png",
     "static/media/independence.png": "./static/media/independence.ce34bb800d79cf691d10.png",
     "static/media/30k_soms.png": "./static/media/30k_soms.e22e469b2b3124e98a2a.png",
-    "static/media/15.png": "./static/media/15.b891cfa04f981fde82be.png",
-    "static/media/14.png": "./static/media/14.2227a9ebfd9da34e1fe3.png",
+    "static/media/3.png": "./static/media/3.1c1beef7125647b32ae4.png",
+    "static/media/2.png": "./static/media/2.2d62c342f90287b6bab6.png",
     "static/media/burqa.jpeg": "./static/media/burqa.c328cc48650ddc4f2a4f.jpeg",
     "static/media/30_gender_quota.png": "./static/media/30_gender_quota.31e56cada6fa4a0e26fe.png",
     "static/media/Against_violence_applied_everywhere.png": "./static/media/Against_violence_applied_everywhere.36aefa15ca5562f66a6b.png",
-    "static/media/12.png": "./static/media/12.e1311f8cf21128083adb.png",
-    "static/media/13.png": "./static/media/13.866b606e8373d06034c0.png",
+    "static/media/4.png": "./static/media/4.690b663c322dfda94a18.png",
+    "static/media/5.png": "./static/media/5.e7596a6a5f2ab050d70e.png",
+    "static/media/1.png": "./static/media/1.6f632fbbabf197db2b56.png",
     "static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.png": "./static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.9430e96bedd827d20b7b.png",
     "static/media/Equal_representation_in_national_parliaments_globally.png": "./static/media/Equal_representation_in_national_parliaments_globally.2c7a1353dfcd42e5d15a.png",
-    "static/media/17.png": "./static/media/17.016648305f254a4169f0.png",
-    "static/media/16.png": "./static/media/16.cf29a9eb1697a2155dba.png",
     "static/media/Gender_Gap_closed_in_Kyrgyzstan.png": "./static/media/Gender_Gap_closed_in_Kyrgyzstan.83e1e26c75a22ddb7c28.png",
     "index.html": "./index.html",
-    "main.84a56d56.css.map": "./static/css/main.84a56d56.css.map",
-    "main.0a282b64.js.map": "./static/js/main.0a282b64.js.map"
+    "main.af395741.css.map": "./static/css/main.af395741.css.map",
+    "main.65686013.js.map": "./static/js/main.65686013.js.map"
   },
   "entrypoints": [
-    "static/css/main.84a56d56.css",
-    "static/js/main.0a282b64.js"
+    "static/css/main.af395741.css",
+    "static/js/main.65686013.js"
   ]
 }
