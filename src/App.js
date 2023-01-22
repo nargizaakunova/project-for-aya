@@ -28,7 +28,7 @@ const App = () => {
   const [swiperInst, setSwiperInst] = useState(null);
   const [initialProgress, setInitialProgress] = useState(null);
 
-  const mainPageIndex = isMobile ? 11 : 31;
+  const mainPageIndex = isMobile ? 12 : 31;
 
   const onSwiper = (swiper) => {
     setSwiperInst(swiper);
