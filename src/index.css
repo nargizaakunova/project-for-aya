@@ -1050,6 +1050,22 @@ div.timeline.absent::after {
   justify-content: center;
 }
 
+.swiper-slide div.thumbContainer.sources div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+button.go-to-main {
+  padding: 20px 40px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  background-color: #281d42;
+  color: #fff;
+}
+
 .swiper-slide[data-swiper-slide-index='10'] .thumbContainer {
   /* background-color: rgb(245, 245, 245); */
   background-color: #f4f4f4;
