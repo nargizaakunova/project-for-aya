@@ -28,7 +28,7 @@ const App = () => {
   const [swiperInst, setSwiperInst] = useState(null);
   const [initialProgress, setInitialProgress] = useState(null);
 
-  const mainPageIndex = isMobile ? 12 : 26;
+  const mainPageIndex = isMobile ? 11 : 31;
 
   const onSwiper = (swiper) => {
     setSwiperInst(swiper);
@@ -91,7 +91,7 @@ const App = () => {
         speed={1200}
         className="swiper-container"
         modules={[FreeMode, Mousewheel, Keyboard]}
-        loopedSlides={isMobile ? undefined : 15}
+        loopedSlides={isMobile ? 20 : 20}
         loop={true}
         slidesPerView={isMobile ? 1 : 'auto'}
         grabCursor="true"
