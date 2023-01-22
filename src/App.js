@@ -215,7 +215,7 @@ const App = () => {
           </div>
 
           <div className="left" onClick={scrollLeftHandler}>
-            <p> Past</p>
+            <p style={{ color: '#787878' }}>Past</p>
             <svg
               className="actionHint"
               width="18px"
@@ -241,7 +241,7 @@ const App = () => {
             </svg>
           </div>
           <div className="right" onClick={scrollRightHandler}>
-            <p>Future</p>
+            <p style={{ color: '#787878' }}>Future</p>
             <svg
               className="actionHint"
               width="18px"

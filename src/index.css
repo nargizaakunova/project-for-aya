@@ -43,6 +43,7 @@ svg.actionHint {
   margin: 0 2rem;
   cursor: pointer;
   overflow: visible;
+  stroke: #fff;
 }
 
 svg.actionHint polygon,
@@ -415,7 +416,10 @@ a:active {
     width: 100%;
     object-fit: contain;
     margin-bottom: 40px;
-    max-height: 260px !important;
+    max-height: 310px !important;
+  }
+  img.graphicImage:last-child {
+    margin-bottom: 90px;
   }
   .thumbContainer p {
     padding: 140px 15px 0;
