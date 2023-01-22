@@ -91,7 +91,7 @@ const App = () => {
         speed={1200}
         className="swiper-container"
         modules={[FreeMode, Mousewheel, Keyboard]}
-        loopedSlides={isMobile ? 20 : 20}
+        loopedSlides={isMobile ? undefined : 20}
         loop={true}
         slidesPerView={isMobile ? 1 : 'auto'}
         grabCursor="true"
