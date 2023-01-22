@@ -935,7 +935,8 @@ a:active {
 
 .swiper-wrapper .first-slide {
   width: 100vw !important;
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
+  animation: mainPageColors 8s ease-in infinite alternate;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1258,4 +1259,16 @@ button.go-to-main {
   overflow: auto;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
+}
+
+@keyframes mainPageColors {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #fbe9d7;
+  }
+  100% {
+    background-color: #f6d5f7;
+  }
 }
