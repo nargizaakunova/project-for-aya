@@ -601,7 +601,7 @@ a:active {
     font-size: 18px;
   }
   .thumbContainer img {
-    width: 50%;
+    width: 30%;
   }
   /* Future */
   .artemis img {
@@ -641,7 +641,7 @@ a:active {
     text-align: center;
   }
   .zoo img {
-    width: 90%;
+    width: 42%;
     padding-bottom: unset;
     bottom: -2%;
   }
@@ -655,7 +655,7 @@ a:active {
     text-align: center;
   }
   .rights img {
-    width: 90%;
+    width: 60%;
     padding-bottom: unset;
     top: -20%;
   }
@@ -663,13 +663,13 @@ a:active {
     padding: 60px 30px 0;
   }
   .burqa img {
-    width: 45%;
+    width: 23%;
   }
   .abortions img {
-    width: 56%;
+    width: 31%;
   }
   .independence img {
-    width: 60%;
+    width: 34%;
   }
   .otunbaeva img {
   }
@@ -686,7 +686,7 @@ a:active {
   }
   .ombudswoman img {
     margin-left: unset;
-    width: 58%;
+    width: 30%;
   }
 }
 @media (max-width: 940px) and (orientation: landscape) {
@@ -699,7 +699,7 @@ a:active {
     font-size: 18px;
   }
   .thumbContainer img {
-    width: 50%;
+    width: 22%;
   }
   /* Future */
   .artemis img {
@@ -708,10 +708,10 @@ a:active {
   }
   .genderQuota img {
     padding-bottom: unset;
-    bottom: 35px;
+    bottom: 44px;
   }
   .kulak img {
-    width: 47%;
+    width: 20%;
   }
   .parliament img {
     bottom: -12px;
@@ -740,7 +740,7 @@ a:active {
     text-align: center;
   }
   .zoo img {
-    width: 84%;
+    width: 38%;
     padding-bottom: unset;
     bottom: 0;
   }
@@ -754,21 +754,21 @@ a:active {
     text-align: center;
   }
   .rights img {
-    width: 84%;
+    width: 45%;
     padding-bottom: unset;
-    top: -20%;
+    bottom: 20px;
   }
   .burqa p {
     padding: 50px 30px 0;
   }
   .burqa img {
-    width: 38%;
+    width: 18%;
   }
   .abortions img {
-    width: 56%;
+    width: 25%;
   }
   .independence img {
-    width: 60%;
+    width: 26%;
   }
   .otunbaeva img {
   }
@@ -786,7 +786,7 @@ a:active {
   }
   .ombudswoman img {
     margin-left: unset;
-    width: 58%;
+    width: 26%;
   }
 }
 
@@ -1208,6 +1208,7 @@ button.go-to-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   height: 100%;
   width: 100%;
   overflow: auto;
