@@ -61,8 +61,14 @@ const App = () => {
     }
   };
 
-  const onSliderScroll = (swiper) => {
+  const onSlideChange = (swiper) => {
     console.log(swiper);
+    if (swiper.activeIndex === 26) {
+      setInitialProgress(() => swiper.updateProgress());
+      // console.log(initialProgress);
+    }
+  };
+  const onSliderScroll = (swiper) => {
     const scrollableContent = swiper.slides[swiper.activeIndex].querySelector(
       '.scrollable-content'
     );
@@ -106,6 +112,7 @@ const App = () => {
         mousewheel={false}
         onSwiper={onSwiper}
         onScroll={onSliderScroll}
+        onSlideChange={onSlideChange}
       >
         {/* BREAK */}
         <SwiperSlide>
