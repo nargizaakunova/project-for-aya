@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Mousewheel, Keyboard } from 'swiper';
 import 'swiper/css';
-import { PAST_EVENTS } from './index';
+import IMAGES, { PAST_EVENTS } from './index';
 import { FUTURE_EVENTS } from './index';
 
 const isMobileOrTablet = function () {
@@ -152,8 +152,8 @@ const App = () => {
             <h1>When Kyrgyzstan will close the Gender Pay Gap?</h1>
 
             <svg
-              className={isMobile ? 'rotate90degrees' : ''}
-              style={{ overflow: 'visible' }}
+              className={isMobile}
+              style={{ overflow: 'visible', marginBottom: '8px' }}
               xmlns="http://www.w3.org/2000/svg"
               width="40"
               fillRule="evenodd"
@@ -178,7 +178,7 @@ const App = () => {
                 d="M236.717 123.359C236.717 60.794 185.923 10 123.359 10 60.794 10 10 60.794 10 123.359v143.237c0 62.565 50.794 113.359 113.359 113.359 62.564 0 113.358-50.794 113.358-113.359V123.359z"
               ></path>
             </svg>
-            <p>{!isMobile ? 'Scroll up/down' : 'Swipe left/right'}</p>
+            <p>{!isMobile ? 'Scroll up/down' : 'Swipe up/down'}</p>
 
             <p className="description">
               Gender pay gap is a difference between average annual earnings of
@@ -187,27 +187,31 @@ const App = () => {
               what happened in 152 years in the past and what will happen in the
               future.
             </p>
-            <p className="description">
-              Gender pay gap is a difference between average annual earnings of
-              women and men. According to the Global Gender Gap Report 2022,
-              Central Asia will close the gender gap in 152 years. Let’s see
-              what happened in 152 years in the past and what will happen in the
-              future.
-            </p>
-            <p className="description">
-              Gender pay gap is a difference between average annual earnings of
-              women and men. According to the Global Gender Gap Report 2022,
-              Central Asia will close the gender gap in 152 years. Let’s see
-              what happened in 152 years in the past and what will happen in the
-              future.
-            </p>
-            <p className="description">
-              Gender pay gap is a difference between average annual earnings of
-              women and men. According to the Global Gender Gap Report 2022,
-              Central Asia will close the gender gap in 152 years. Let’s see
-              what happened in 152 years in the past and what will happen in the
-              future.
-            </p>
+            <img
+              className="graphicImage"
+              src={IMAGES.graphic1}
+              alt="Graphic 1"
+            />
+            <img
+              className="graphicImage"
+              src={IMAGES.graphic2}
+              alt="Graphic 2"
+            />
+            <img
+              className="graphicImage"
+              src={IMAGES.graphic3}
+              alt="Graphic 3"
+            />
+            <img
+              className="graphicImage"
+              src={IMAGES.graphic4}
+              alt="Graphic 4"
+            />
+            <img
+              className="graphicImage"
+              src={IMAGES.graphic5}
+              alt="Graphic 5"
+            />
           </div>
 
           <div className="left" onClick={scrollLeftHandler}>

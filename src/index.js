@@ -24,12 +24,11 @@ const IMAGES = {
   genderEquality: require('./images/Future-visuals/Gender_equality_achieved_globally.png'),
   genderGap: require('./images/Future-visuals/Gender_Gap_closed_in_Kyrgyzstan.png'),
 
-  graphic1: require('./images/Graphics/12.png'),
-  graphic2: require('./images/Graphics/13.png'),
-  graphic3: require('./images/Graphics/14.png'),
-  graphic4: require('./images/Graphics/15.png'),
-  graphic5: require('./images/Graphics/16.png'),
-  graphic6: require('./images/Graphics/17.png'),
+  graphic1: require('./images/Graphics/1.png'),
+  graphic2: require('./images/Graphics/2.png'),
+  graphic3: require('./images/Graphics/3.png'),
+  graphic4: require('./images/Graphics/4.png'),
+  graphic5: require('./images/Graphics/5.png'),
 };
 
 export default IMAGES;
