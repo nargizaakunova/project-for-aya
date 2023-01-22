@@ -43,7 +43,7 @@ svg.actionHint {
   margin: 0 2rem;
   cursor: pointer;
   overflow: visible;
-  stroke: #fff;
+  stroke: none;
 }
 
 svg.actionHint polygon,
@@ -1046,10 +1046,10 @@ svg #wheel {
   }
 
   .left {
-    left: -2px;
+    left: -8px;
   }
   .right {
-    right: -2px;
+    right: -8px;
   }
 }
 @media screen and (max-width: 400px) {
