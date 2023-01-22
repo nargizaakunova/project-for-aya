@@ -43,18 +43,19 @@ svg.actionHint {
   margin: 0 2rem;
   cursor: pointer;
   overflow: visible;
-  stroke: none;
+  stroke: currentColor;
+  color: transparent;
 }
 
 svg.actionHint polygon,
 svg.actionHint path {
   transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: #00000036;
 }
 
 svg.actionHint polygon,
 svg.actionHint path {
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-  fill: rgb(49, 49, 49);
 }
 
 svg.actionHint .arrow {
