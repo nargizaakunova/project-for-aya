@@ -28,9 +28,11 @@ const App = () => {
   const [swiperInst, setSwiperInst] = useState(null);
   const [initialProgress, setInitialProgress] = useState(null);
 
+  const mainPageIndex = isMobile ? 12 : 26;
+
   const onSwiper = (swiper) => {
     setSwiperInst(swiper);
-    swiper.slideTo(26, 0);
+    swiper.slideTo(mainPageIndex, 0);
   };
 
   const scrollLeftHandler = () => {
@@ -61,13 +63,6 @@ const App = () => {
     }
   };
 
-  const onSlideChange = (swiper) => {
-    console.log(swiper);
-    if (swiper.activeIndex === 26) {
-      setInitialProgress(() => swiper.updateProgress());
-      // console.log(initialProgress);
-    }
-  };
   const onSliderScroll = (swiper) => {
     const scrollableContent = swiper.slides[swiper.activeIndex].querySelector(
       '.scrollable-content'
@@ -75,7 +70,7 @@ const App = () => {
 
     if (initialProgress >= swiper.progress && scrollableContent) {
       if (scrollableContent.scrollTop !== 0) {
-        swiper.slideTo(26, 0);
+        swiper.slideTo(mainPageIndex, 0);
         swiper.mousewheel.disable();
       }
 
@@ -83,7 +78,7 @@ const App = () => {
         scrollableContent.scrollTop === 0 &&
         swiper.translate < swiper.previousTranslate
       ) {
-        swiper.slideTo(26, 200);
+        swiper.slideTo(mainPageIndex, 200);
         swiper.mousewheel.disable();
       }
     }
@@ -96,9 +91,9 @@ const App = () => {
         speed={1200}
         className="swiper-container"
         modules={[FreeMode, Mousewheel, Keyboard]}
-        loopedSlides={15}
+        loopedSlides={isMobile ? undefined : 15}
         loop={true}
-        slidesPerView="auto"
+        slidesPerView={isMobile ? 1 : 'auto'}
         grabCursor="true"
         keyboard={{
           enabled: true,
@@ -112,7 +107,6 @@ const App = () => {
         mousewheel={false}
         onSwiper={onSwiper}
         onScroll={onSliderScroll}
-        onSlideChange={onSlideChange}
       >
         {/* BREAK */}
         <SwiperSlide>
@@ -120,10 +114,6 @@ const App = () => {
             <div>
               <a href="./sources.html">List of sources</a>
             </div>
-            {/* <div className="projectInfo">
-              <div className="timeline"></div>
-              <h2 className="serif">Break</h2>
-            </div> */}
           </div>
         </SwiperSlide>
         {/* PAST EVENTS */}
@@ -140,11 +130,6 @@ const App = () => {
                 {event.title}
               </p>
               <img src={event.image} alt="Event in timeline" />
-
-              {/* <div className="projectInfo">
-                <div className="timeline"></div>
-                <h2 className="serif">{event.year}</h2>
-              </div> */}
             </div>
             <div className="projectInfo">
               <div className="timeline"></div>
@@ -275,19 +260,6 @@ const App = () => {
             <div className={`thumbContainer future ${event.className || ''}`}>
               <p>{event.title}</p>
               <img src={event.image} alt="Event in timeline" />
-
-              {/* <div className="projectInfo">
-                {event.year ? (
-                  <div className="timeline"></div>
-                ) : (
-                  <div className="timeline absent"></div>
-                )}
-                {event.year ? (
-                  <h2 className="serif">{event.year}</h2>
-                ) : (
-                  <h2 className="serif">&nbsp;</h2>
-                )}
-              </div> */}
             </div>
             <div className="projectInfo">
               {event.year ? (
