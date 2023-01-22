@@ -1042,14 +1042,14 @@ svg #wheel {
 @media screen and (max-width: 768px) {
   .left svg,
   .right svg {
-    width: 42px;
+    width: 38px;
   }
 
   .left {
-    left: 0px;
+    left: -2px;
   }
   .right {
-    right: 0px;
+    right: -2px;
   }
 }
 @media screen and (max-width: 400px) {
