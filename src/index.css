@@ -963,7 +963,7 @@ a:active {
   margin-bottom: 50px;
   /* margin-top: 40px; */
 }
-.scrollable-content .description:nth-child(4) {
+.scrollable-content .description:nth-child(6) {
   margin-top: 40px;
 }
 
@@ -1045,6 +1045,15 @@ svg #wheel {
 }
 
 @media screen and (max-width: 768px) {
+  .scrollable-content {
+    position: relative;
+  }
+  .left,
+  .right {
+    top: 30px;
+    bottom: unset;
+  }
+
   .left svg,
   .right svg {
     width: 38px;
