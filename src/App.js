@@ -57,6 +57,7 @@ const App = () => {
       }
     }
     if (event.target.scrollTop === 0) {
+      setInitialProgress(swiperInst.progress);
       if (!swiperInst.mousewheel.enabled) {
         swiperInst.mousewheel.enable();
       }
@@ -86,6 +87,17 @@ const App = () => {
 
   const goToMainPage = () => {
     swiperInst.slideTo(mainPageIndex);
+
+    const scrollableContent = swiperInst.slides[
+      swiperInst.activeIndex
+    ].querySelector('.scrollable-content');
+
+    if (scrollableContent) {
+      scrollableContent.scrollTop = 0;
+      setTimeout(() => {
+        swiperInst.mousewheel.disable();
+      });
+    }
   };
 
   return (
@@ -152,7 +164,6 @@ const App = () => {
             <h1>When Kyrgyzstan will close the Gender Pay Gap?</h1>
 
             <svg
-              className={isMobile}
               style={{ overflow: 'visible', marginBottom: '8px' }}
               xmlns="http://www.w3.org/2000/svg"
               width="40"
