@@ -1045,15 +1045,6 @@ svg #wheel {
 }
 
 @media screen and (max-width: 768px) {
-  .scrollable-content {
-    position: relative;
-  }
-  .left,
-  .right {
-    top: 30px;
-    bottom: unset;
-  }
-
   .left svg,
   .right svg {
     width: 38px;
