@@ -321,7 +321,7 @@ a:active {
     width: 100%;
     object-fit: contain;
     margin-bottom: 40px;
-    max-height: 400px !important;
+    max-height: 440px !important;
   }
   img.graphicImage:last-child {
     margin-bottom: 60px;
@@ -415,7 +415,7 @@ a:active {
     width: 100%;
     object-fit: contain;
     margin-bottom: 40px;
-    max-height: 220px !important;
+    max-height: 260px !important;
   }
   .thumbContainer p {
     padding: 140px 15px 0;
@@ -1051,14 +1051,14 @@ svg #wheel {
 @media screen and (max-width: 400px) {
   .left svg,
   .right svg {
-    width: 16px;
+    width: 14px;
   }
 
   .left {
-    left: -4px;
+    left: -5px;
   }
   .right {
-    right: -4px;
+    right: -5px;
   }
 }
 
