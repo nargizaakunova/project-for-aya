@@ -298,7 +298,7 @@ a:active {
     width: 400px;
   }
   .ru .ombudswoman p {
-    right: 5%;
+    left: unset;
   }
   .ombudswoman img {
     margin-left: unset;
@@ -409,7 +409,7 @@ a:active {
     max-height: 310px !important;
   }
   .ru .graphicImage {
-    width: 60%;
+    width: 76%;
   }
   img.graphicImage:last-child {
     margin-bottom: 90px;
@@ -500,7 +500,7 @@ a:active {
     width: 290px;
   }
   .ru .burqa img {
-    width: 280px;
+    width: 285px;
   }
 
   .abortions img {
@@ -925,7 +925,7 @@ a:active {
     left: 120px;
   }
   .ru .burqa img {
-    width: 184px;
+    width: 18%;
   }
   .abortions img {
     width: 28%;
