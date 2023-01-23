@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.2c8cfcc7.css",
-    "main.js": "./static/js/main.1273572c.js",
+    "main.css": "./static/css/main.a6dcc75a.css",
+    "main.js": "./static/js/main.8215edf3.js",
     "static/media/womenSatellite.jpeg": "./static/media/womenSatellite.d411698addd4fd0b1083.jpeg",
     "static/media/kurmandjan.png": "./static/media/kurmandjan.0a7d6538df0cf665ad5a.png",
     "static/media/zoo.png": "./static/media/zoo.8fabfca7cf78244029d0.png",
@@ -16,20 +16,21 @@
     "static/media/burqa.jpeg": "./static/media/burqa.948d4f7da75a14eaa362.jpeg",
     "static/media/4.png": "./static/media/4.94c6df57c58baeedcf78.png",
     "static/media/independence.png": "./static/media/independence.c38eb48e56b355a8ff2b.png",
-    "static/media/3.png": "./static/media/3.6e489b9cd570de5c23c7.png",
-    "static/media/2.png": "./static/media/2.fd37ccf78dbc44640edb.png",
+    "static/media/3.png": "./static/media/3.3732333fd9cb15b3e6db.png",
+    "static/media/2.png": "./static/media/2.f2e9697ec6afba7cfba4.png",
     "static/media/1.png": "./static/media/1.84f6dec1e81a08813a93.png",
-    "static/media/5.png": "./static/media/5.34a6831cbc509ea95bda.png",
     "static/media/30_gender_quota.png": "./static/media/30_gender_quota.bad1418cea5be3fb26a5.png",
     "static/media/Against_violence_applied_everywhere.png": "./static/media/Against_violence_applied_everywhere.e4e9ca31d56b928df93b.png",
+    "static/media/5.png": "./static/media/5.3bb85b18f6808c5a923f.png",
+    "static/media/6.png": "./static/media/6.ed52695b3f96cc574534.png",
     "static/media/Equal_representation_in_national_parliaments_globally.png": "./static/media/Equal_representation_in_national_parliaments_globally.e7baad969ad7e6e681f3.png",
     "static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.png": "./static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.9a83a90968c8ccbc6885.png",
     "index.html": "./index.html",
-    "main.2c8cfcc7.css.map": "./static/css/main.2c8cfcc7.css.map",
-    "main.1273572c.js.map": "./static/js/main.1273572c.js.map"
+    "main.a6dcc75a.css.map": "./static/css/main.a6dcc75a.css.map",
+    "main.8215edf3.js.map": "./static/js/main.8215edf3.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c8cfcc7.css",
-    "static/js/main.1273572c.js"
+    "static/css/main.a6dcc75a.css",
+    "static/js/main.8215edf3.js"
   ]
 }

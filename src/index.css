@@ -212,7 +212,7 @@ a:active {
 
 @media (min-width: 1280px) {
   .graphicImage {
-    width: 100%;
+    width: 42%;
     object-fit: contain;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -304,7 +304,7 @@ a:active {
 }
 @media (max-width: 1279px) {
   .graphicImage {
-    width: 100%;
+    width: 42%;
     object-fit: contain;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -399,18 +399,24 @@ a:active {
 }
 @media (max-width: 768px) {
   .graphicImage {
-    width: 100%;
+    width: 80%;
     object-fit: contain;
     margin-bottom: 40px;
     margin-top: 40px;
     max-height: 310px !important;
   }
+
   img.graphicImage:last-child {
     margin-bottom: 90px;
   }
   .thumbContainer p {
     padding: 140px 15px 0;
     height: 20%;
+  }
+  .ru .thumbContainer p {
+    padding: 115px 15px 0;
+    line-height: 1.3;
+    font-size: 20px;
   }
   .thumbContainer img {
     width: 90%;
@@ -457,7 +463,7 @@ a:active {
   .zoo img {
     width: 100%;
     padding-bottom: unset;
-    bottom: 100px;
+    bottom: 70px;
   }
 
   .rights p {
@@ -477,8 +483,11 @@ a:active {
   .burqa p {
     padding: 110px 15px 0;
   }
+  .ru .burqa p {
+    padding: 90px 15px 0;
+  }
   .burqa img {
-    width: 342px;
+    width: 290px;
   }
   .abortions img {
   }
@@ -489,7 +498,7 @@ a:active {
   .satellite img {
     width: 100%;
     object-fit: cover;
-    height: 80%;
+    height: 70%;
   }
   .ombudswoman p {
     display: unset;
@@ -936,7 +945,9 @@ a:active {
   padding: 0 10px;
   margin-bottom: 40px;
 }
-
+.ru .first-slide h1 {
+  font-size: 34px;
+}
 .description {
   font-size: 18px;
   line-height: 1.4;
@@ -1030,6 +1041,15 @@ svg #wheel {
   }
   .right {
     right: -5px;
+  }
+
+  .ru .left {
+    left: 4px;
+    font-size: 14px;
+  }
+  .ru .right {
+    right: 4px;
+    font-size: 14px;
   }
 }
 

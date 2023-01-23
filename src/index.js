@@ -38,6 +38,7 @@ const IMAGES = {
       graphic3: require('./images/ru/Graphics/3.png'),
       graphic4: require('./images/ru/Graphics/4.png'),
       graphic5: require('./images/ru/Graphics/5.png'),
+      graphic6: require('./images/ru/Graphics/6.png'),
     },
   },
 };

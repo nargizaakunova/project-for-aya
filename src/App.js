@@ -58,7 +58,7 @@ i18n.use(initReactI18next).init({
         scroll: 'Скрольте вниз/вверх',
         swipe: 'Свайпайте вниз/вверх',
         descriptionMainPage:
-          'Гендерный разрыв в оплате труда - это разница между среднегодовым заработком женщин и мужчин. Согласно отчету Global Gender Gap Report 2022, Центральная Азия ликвидирует гендерный разрыв через 152 года. Давайте посмотрим, что произошло за 152 года в прошлом и что произойдет в будущем (скролл влево и вправо где будет вся дата в иксель).',
+          'Гендерный разрыв в оплате труда - это разница между среднегодовым заработком женщин и мужчин. Согласно отчету Global Gender Gap Report 2022, Центральная Азия ликвидирует гендерный разрыв через 152 года. Давайте посмотрим, что произошло за 152 года в прошлом и что произойдет в будущем',
         // Past events
         kurmandjan:
           'Курманжан Датка становится Алайской царицей (157 лет назад)',
@@ -212,7 +212,7 @@ const App = () => {
       <Swiper
         longSwipes={false}
         speed={1200}
-        className="swiper-container"
+        className={`swiper-container ${i18n.language}`}
         modules={[FreeMode, Mousewheel, Keyboard]}
         loopedSlides={isMobile ? undefined : 20}
         loop={true}
@@ -408,6 +408,13 @@ const App = () => {
               src={IMAGES.graphics[i18n.language].graphic5}
               alt="Graphic 5"
             />
+            {i18n.language === 'ru' && (
+              <img
+                className="graphicImage"
+                src={IMAGES.graphics[i18n.language].graphic6}
+                alt="Graphic 6"
+              />
+            )}
           </div>
         </SwiperSlide>
         {/* FUTURE EVENTS */}
