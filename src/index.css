@@ -921,7 +921,7 @@ a:active {
 
 .swiper-wrapper .first-slide {
   width: 100vw !important;
-  animation: mainPageColors 20s ease-in infinite alternate;
+  animation: mainPageColors 30s ease-in infinite alternate-reverse;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1072,6 +1072,16 @@ button.go-to-main {
   font-size: 16px;
   background-color: #281d42;
   color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+button.go-to-main:hover {
+  border: 2px solid #281d42;
+  background-color: #fff;
+  color: #281d42;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .swiper-slide[data-swiper-slide-index='10'] .thumbContainer {
@@ -1148,10 +1158,19 @@ button.go-to-main {
 
 @keyframes mainPageColors {
   0% {
-    background-color: #bde0fe;
+    background-color: #f9f9f9;
+  }
+  25% {
+    background-color: #7fc8f823;
+  }
+  50% {
+    background-color: #ffe45e29;
+  }
+  75% {
+    background-color: #f9f9f9;
   }
   100% {
-    background-color: #a2d2ff;
+    background-color: #fff;
   }
 }
 
@@ -1159,7 +1178,27 @@ button.go-to-main {
   position: relative;
   top: 12px;
 }
+.languages a {
+  color: #1a1a1a;
+}
+a.active-language {
+  background: #281d42;
+  padding: 3px 6px;
+  border-radius: 10px;
+  color: #fff;
+}
 
-a {
+a:link,
+a:visited,
+a:active,
+a:hover {
   text-decoration: none;
+}
+
+.sources-link {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  fill: none;
+  stroke: black;
 }

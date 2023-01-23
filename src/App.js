@@ -235,7 +235,26 @@ const App = () => {
         <SwiperSlide>
           <div className="thumbContainer sources">
             <div>
-              <a href="./sources.html">{t('sources')}</a>
+              <span>
+                <svg
+                  className="sources-link"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="10"
+                  stroke-dashoffset="0"
+                  stroke-dasharray="0"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  viewBox="0 0 100 100"
+                >
+                  <polyline
+                    fill="none"
+                    points="40 20 20 20 20 90 80 90 80 60"
+                  />
+                  <polyline fill="none" points="60 10 90 10 90 40" />
+                  <line fill="none" x1="89" y1="11" x2="50" y2="50" />
+                </svg>
+                <a href="./sources.html">{t('sources')}</a>
+              </span>
               <button className="go-to-main" onClick={goToMainPage}>
                 {t('button')}
               </button>
@@ -319,8 +338,19 @@ const App = () => {
               </svg>
             </div>
             <span className="languages">
-              <a href="?lang=ru">RU / </a>
-              <a href="?lang=en">EN</a>
+              <a
+                className={i18n.language !== 'en' ? 'active-language' : ''}
+                href="?lang=ru"
+              >
+                RU
+              </a>
+              <span> / </span>
+              <a
+                className={i18n.language === 'en' ? 'active-language' : ''}
+                href="?lang=en"
+              >
+                EN
+              </a>
             </span>
             <h1>{t('title')}</h1>
 

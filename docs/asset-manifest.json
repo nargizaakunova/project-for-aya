@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.9e2c487f.css",
-    "main.js": "./static/js/main.63f07f60.js",
+    "main.css": "./static/css/main.2c8cfcc7.css",
+    "main.js": "./static/js/main.1273572c.js",
     "static/media/womenSatellite.jpeg": "./static/media/womenSatellite.d411698addd4fd0b1083.jpeg",
     "static/media/kurmandjan.png": "./static/media/kurmandjan.0a7d6538df0cf665ad5a.png",
     "static/media/zoo.png": "./static/media/zoo.8fabfca7cf78244029d0.png",
@@ -25,11 +25,11 @@
     "static/media/Equal_representation_in_national_parliaments_globally.png": "./static/media/Equal_representation_in_national_parliaments_globally.e7baad969ad7e6e681f3.png",
     "static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.png": "./static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.9a83a90968c8ccbc6885.png",
     "index.html": "./index.html",
-    "main.9e2c487f.css.map": "./static/css/main.9e2c487f.css.map",
-    "main.63f07f60.js.map": "./static/js/main.63f07f60.js.map"
+    "main.2c8cfcc7.css.map": "./static/css/main.2c8cfcc7.css.map",
+    "main.1273572c.js.map": "./static/js/main.1273572c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e2c487f.css",
-    "static/js/main.63f07f60.js"
+    "static/css/main.2c8cfcc7.css",
+    "static/js/main.1273572c.js"
   ]
 }
