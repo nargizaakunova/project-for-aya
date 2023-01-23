@@ -12,6 +12,7 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        // Main Page
         past: 'Past',
         future: 'Future',
         title: 'When Kyrgyzstan will close the Gender Pay Gap?',
@@ -19,10 +20,38 @@ i18n.use(initReactI18next).init({
         swipe: 'Swipe up/down',
         descriptionMainPage:
           'Gender pay gap is a difference between average annual earnings of women and men. According to the Central Asia will close the gender gap in 152 years. Let’s see what happened in 152 years in the past and what will happen in the future.',
+        // Past events
+        kurmandjan: 'Kurmanzhan Datka became the Queen of Alay',
+        nikolay: 'Russian Empire colonized the last Kyrgyz lands in the south',
+        zoo: 'Kyrgyz people in the Kyrgyz Exhibition in a "Human zoo" in Copenhagen',
+        rights: 'Soviet women gain their rights',
+        burqa: 'Central Asian women burn their burqa',
+        abortions: 'Abortions allowed (again)',
+        independence: 'Independence',
+        otunbaeva: 'First woman president in Kyrgyzstan Roza Otunbaeva',
+        satellite: "Young Women Started to Build Kyrgyzstan's First Satellite",
+        ombudswoman: "First ombudswoman in Kyrgyzstan's history",
+        // Future events
+        artemis: 'First women in the moon (Artemis program)',
+        pig: 'The average salary in Kyrgyzstan will be almost 30 thousand soms',
+        genderQuota:
+          '10 years since the adoption of the law on the 30% gender quota in local councils',
+        kulak:
+          'Laws to prevent violence against women and girls placed everywhere (+21 years)',
+        parliament:
+          'Equal representation in national parliaments (globally) (+40 years)',
+        leadership:
+          'Equal representation in leadership positions in the workplace (globally) (+140 years)',
+        genderGap: 'Central Asia will close the gender gap (+152 years)',
+        unicorn: 'Gender equality achieved globally (+286 years)',
+        // List of sources
+        sources: 'List of sources',
+        button: 'Go to Current Time',
       },
     },
     ru: {
       translation: {
+        // Main Page
         past: 'Прошлое',
         future: 'Будущее',
         title: 'Когда Кыргызстан устранит гендерный разрыв в оплате труда? ',
@@ -30,6 +59,39 @@ i18n.use(initReactI18next).init({
         swipe: 'Свайпайте вниз/вверх',
         descriptionMainPage:
           'Гендерный разрыв в оплате труда - это разница между среднегодовым заработком женщин и мужчин. Согласно отчету Global Gender Gap Report 2022, Центральная Азия ликвидирует гендерный разрыв через 152 года. Давайте посмотрим, что произошло за 152 года в прошлом и что произойдет в будущем (скролл влево и вправо где будет вся дата в иксель).',
+        // Past events
+        kurmandjan:
+          'Курманжан Датка становится Алайской царицей (157 лет назад)',
+        nikolay:
+          'Российская империя колонизирует последние земли Кыргызстана на юге (146 лет назад)',
+        zoo: 'Кыргызы и кыргызский кочевой быт на выставке в человеческом зоопарке Копенгагена (122 года назад)',
+        rights: 'СССР провозгласил гендерное равенство (104 года назад)',
+        burqa: 'Центральноазиатские женщины сжигают паранджу (95 лет назад)',
+        abortions: 'Аборты (снова) легализованы в СССР (67 лет назад)',
+        independence:
+          'Кыргызская Республика обрела независимость (31 год назад)',
+        otunbaeva:
+          'Роза Отунбаева - Первая женщина президент в Кыргызстане и Центральной Азии (12 лет назад)',
+        satellite:
+          'Девушки из "Kyrgyz Satelite" начали строить первый спутник Кыргызстана (4 года назад)',
+        ombudswoman: 'Первая омбудсвумен в истории Кыргызстана',
+        // Future
+        artemis:
+          'Первая женщина на Луне (Космическая программа Артемида)  (+2 года)',
+        pig: 'Средняя зарплата в Кыргызстане достигнет 30 000 сомов (+3 года)',
+        genderQuota:
+          '10 лет с момента принятия 30-процентной гендерной квоты в местных кенешах',
+        kulak:
+          'Законы, направленные на предотвращение насилия в отношении женщин и девочек, принимаются повсеместно (+21 год)',
+        parliament:
+          'Равное представительство в национальных парламентах (во всем мире) (+40 лет)',
+        leadership:
+          'Равное представительство на руководящих должностях на рабочем месте (во всем мире) (+140 лет)',
+        genderGap: 'Центральная Азия ликвидирует гендерный разрыв (+152 года)',
+        unicorn: 'Гендерное равенство достигнуто во всем мире (+286 лет)',
+        // List of sources
+        sources: 'Список ресурсов',
+        button: 'Вернуться в настоящее время',
       },
     },
   },
@@ -173,10 +235,9 @@ const App = () => {
         <SwiperSlide>
           <div className="thumbContainer sources">
             <div>
-              <a href="./sources.html">List of sources</a>
-
+              <a href="./sources.html">{t('sources')}</a>
               <button className="go-to-main" onClick={goToMainPage}>
-                Go to Current Time
+                {t('button')}
               </button>
             </div>
           </div>
@@ -192,7 +253,7 @@ const App = () => {
                   justifyContent: 'center',
                 }}
               >
-                {event.title}
+                {t(event.id)}
               </p>
               <img src={event.image} alt="Event in timeline" />
             </div>
@@ -323,7 +384,7 @@ const App = () => {
         {FUTURE_EVENTS.map((event) => (
           <SwiperSlide key={`future-${event.id}`}>
             <div className={`thumbContainer future ${event.className || ''}`}>
-              <p>{event.title}</p>
+              <p>{t(event.id)}</p>
               <img src={event.image} alt="Event in timeline" />
             </div>
             <div className="projectInfo">
