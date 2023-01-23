@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "./static/css/main.20aa7fbc.css",
-    "main.js": "./static/js/main.8215edf3.js",
+    "main.css": "./static/css/main.e5c75b38.css",
+    "main.js": "./static/js/main.facdde73.js",
     "static/media/womenSatellite.jpeg": "./static/media/womenSatellite.d411698addd4fd0b1083.jpeg",
+    "static/media/zoo.png": "./static/media/zoo.7a468246edb80dca805c.png",
     "static/media/kurmandjan.png": "./static/media/kurmandjan.0a7d6538df0cf665ad5a.png",
-    "static/media/zoo.png": "./static/media/zoo.8fabfca7cf78244029d0.png",
     "static/media/nikolay.png": "./static/media/nikolay.6e041ba4712be81c57a9.png",
-    "static/media/rights.png": "./static/media/rights.a8fcbdc1149e0838f713.png",
+    "static/media/rights.png": "./static/media/rights.5d685837a72c4b2ace0b.png",
     "static/media/abortions.png": "./static/media/abortions.3529102712b6cdf1b083.png",
     "static/media/ombudswoman.png": "./static/media/ombudswoman.53df7f87124fe99d5dc6.png",
     "static/media/Artemis.png": "./static/media/Artemis.044832fdd68b85c0d4bf.png",
@@ -26,11 +26,11 @@
     "static/media/Equal_representation_in_national_parliaments_globally.png": "./static/media/Equal_representation_in_national_parliaments_globally.e7baad969ad7e6e681f3.png",
     "static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.png": "./static/media/Equal_representation_in_leadership_positions_in_the_workplace_globally.9a83a90968c8ccbc6885.png",
     "index.html": "./index.html",
-    "main.20aa7fbc.css.map": "./static/css/main.20aa7fbc.css.map",
-    "main.8215edf3.js.map": "./static/js/main.8215edf3.js.map"
+    "main.e5c75b38.css.map": "./static/css/main.e5c75b38.css.map",
+    "main.facdde73.js.map": "./static/js/main.facdde73.js.map"
   },
   "entrypoints": [
-    "static/css/main.20aa7fbc.css",
-    "static/js/main.8215edf3.js"
+    "static/css/main.e5c75b38.css",
+    "static/js/main.facdde73.js"
   ]
 }
