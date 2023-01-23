@@ -265,16 +265,10 @@ const App = () => {
         {PAST_EVENTS.map((event) => (
           <SwiperSlide key={`past-${event.id}`}>
             <div className={`thumbContainer past ${event.className || ''}`}>
-              <p
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                {t(event.id)}
-              </p>
-              <img src={event.image} alt="Event in timeline" />
+              <p className="slide-text">{t(event.id)}</p>
+              <div className="slide-img">
+                <img src={event.image} alt="Event in timeline" />
+              </div>
             </div>
             <div className="projectInfo">
               <div className="timeline"></div>
@@ -421,8 +415,10 @@ const App = () => {
         {FUTURE_EVENTS.map((event) => (
           <SwiperSlide key={`future-${event.id}`}>
             <div className={`thumbContainer future ${event.className || ''}`}>
-              <p>{t(event.id)}</p>
-              <img src={event.image} alt="Event in timeline" />
+              <p className="slide-text">{t(event.id)}</p>
+              <div className="slide-img">
+                <img src={event.image} alt="Event in timeline" />
+              </div>
             </div>
             <div className="projectInfo">
               {event.year ? (
