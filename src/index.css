@@ -234,43 +234,6 @@ a:active {
   img.graphicImage:last-child {
     margin-bottom: 80px;
   }
-  /* Future */
-
-  .pig img {
-    width: 73%;
-  }
-  .genderQuota img {
-    padding-bottom: unset;
-    bottom: -10px;
-  }
-  .kulak img {
-    width: 62%;
-  }
-  .parliament img {
-    width: 73%;
-    bottom: -22px;
-  }
-  .leadership img {
-    width: 72%;
-    bottom: -40px;
-  }
-  .genderGap img {
-    bottom: -6px;
-  }
-
-  /*  */
-  /*  */
-  /* Past */
-
-  .abortions img {
-    width: 75%;
-  }
-  .otunbaeva img {
-    width: 73%;
-  }
-  .ru .ombudswoman p {
-    left: unset;
-  }
 }
 
 @media (max-width: 1279px) {
@@ -287,7 +250,7 @@ a:active {
 }
 @media (max-width: 768px) {
   .thumbContainer p {
-    padding: 65px 40px 0;
+    padding: 130px 40px 0;
   }
   .graphicImage {
     width: 80%;
@@ -314,7 +277,7 @@ a:active {
     flex-grow: 1;
   }
   .zoo img {
-    object-position: top;
+    object-position: center;
   }
 }
 @media (max-width: 375px) {
@@ -323,70 +286,10 @@ a:active {
     padding: 120px 10px 0;
     line-height: 1.5;
     margin-bottom: 40px;
-    height: 20%;
     font-size: 18px;
   }
   .thumbContainer img {
     width: 100%;
-  }
-  /* Future */
-  .genderQuota img {
-    padding-bottom: unset;
-    bottom: 16px;
-  }
-  .kulak img {
-    width: 82%;
-  }
-  .parliament img {
-    bottom: -18px;
-  }
-  .leadership img {
-    bottom: -40px;
-  }
-  .genderGap img {
-    bottom: -6px;
-  }
-  /*  */
-  /*  */
-  /* Past */
-  .zoo p {
-    position: absolute;
-    top: 10%;
-    display: unset;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  .zoo img {
-    width: 100%;
-    padding-bottom: unset;
-    bottom: 21%;
-  }
-
-  .rights p {
-    position: absolute;
-    bottom: 30%;
-    display: unset;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  .rights img {
-    width: 100%;
-    padding-bottom: unset;
-    top: -22%;
-  }
-
-  .satellite img {
-    width: 100%;
-    object-fit: cover;
-    height: 76%;
-  }
-  .ombudswoman p {
-    width: 300px;
-  }
-  .ombudswoman img {
-    margin-left: unset;
   }
 }
 
