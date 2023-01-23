@@ -142,7 +142,7 @@ const App = () => {
     swiper.slideTo(mainPageIndex, 0);
     setTimeout(() => {
       swiper.slideTo(mainPageIndex, 0);
-    });
+    }, 100);
   };
 
   const scrollLeftHandler = () => {
