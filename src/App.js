@@ -1,10 +1,45 @@
 /* eslint-disable no-useless-escape */
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect } from 'react';
+import i18n from 'i18next';
+import { useTranslation, initReactI18next } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Mousewheel, Keyboard } from 'swiper';
 import 'swiper/css';
 import IMAGES, { PAST_EVENTS } from './index';
 import { FUTURE_EVENTS } from './index';
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: {
+        past: 'Past',
+        future: 'Future',
+        title: 'When Kyrgyzstan will close the Gender Pay Gap?',
+        scroll: 'Scroll up/down',
+        swipe: 'Swipe up/down',
+        descriptionMainPage:
+          'Gender pay gap is a difference between average annual earnings of women and men. According to the Central Asia will close the gender gap in 152 years. Let’s see what happened in 152 years in the past and what will happen in the future.',
+      },
+    },
+    ru: {
+      translation: {
+        past: 'Прошлое',
+        future: 'Будущее',
+        title: 'Когда Кыргызстан устранит гендерный разрыв в оплате труда? ',
+        scroll: 'Скрольте вниз/вверх',
+        swipe: 'Свайпайте вниз/вверх',
+        descriptionMainPage:
+          'Гендерный разрыв в оплате труда - это разница между среднегодовым заработком женщин и мужчин. Согласно отчету Global Gender Gap Report 2022, Центральная Азия ликвидирует гендерный разрыв через 152 года. Давайте посмотрим, что произошло за 152 года в прошлом и что произойдет в будущем (скролл влево и вправо где будет вся дата в иксель).',
+      },
+    },
+  },
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  fallbackLng: 'en',
+
+  interpolation: {
+    escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+  },
+});
 
 const isMobileOrTablet = function () {
   let check = false;
@@ -27,6 +62,16 @@ const isMobile = isMobileOrTablet();
 const App = () => {
   const [swiperInst, setSwiperInst] = useState(null);
   const [initialProgress, setInitialProgress] = useState(null);
+
+  const { t, i18n } = useTranslation();
+  useEffect(() => {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    if (params.lang) {
+      i18n.changeLanguage(params.lang);
+    }
+    console.log(i18n.language);
+  }, [i18n]);
 
   const mainPageIndex = isMobile ? 12 : 31;
 
@@ -162,7 +207,7 @@ const App = () => {
         <SwiperSlide className="swiper-slide first-slide">
           <div className="scrollable-content" onScroll={onScroll}>
             <div className="left" onClick={scrollLeftHandler}>
-              <p style={{ color: '#787878' }}>Past</p>
+              <p style={{ color: '#787878' }}>{t('past')}</p>
               <svg
                 className="actionHint"
                 width="18px"
@@ -188,7 +233,7 @@ const App = () => {
               </svg>
             </div>
             <div className="right" onClick={scrollRightHandler}>
-              <p style={{ color: '#787878' }}>Future</p>
+              <p style={{ color: '#787878' }}>{t('future')}</p>
               <svg
                 className="actionHint"
                 width="18px"
@@ -212,8 +257,11 @@ const App = () => {
                 </g>
               </svg>
             </div>
-
-            <h1>When Kyrgyzstan will close the Gender Pay Gap?</h1>
+            <span className="languages">
+              <a href="?lang=ru">RU / </a>
+              <a href="?lang=en">EN</a>
+            </span>
+            <h1>{t('title')}</h1>
 
             <svg
               style={{ overflow: 'visible', marginBottom: '8px' }}
@@ -241,38 +289,32 @@ const App = () => {
                 d="M236.717 123.359C236.717 60.794 185.923 10 123.359 10 60.794 10 10 60.794 10 123.359v143.237c0 62.565 50.794 113.359 113.359 113.359 62.564 0 113.358-50.794 113.358-113.359V123.359z"
               ></path>
             </svg>
-            <p>{!isMobile ? 'Scroll up/down' : 'Swipe up/down'}</p>
+            <p>{!isMobile ? t('scroll') : t('swipe')}</p>
 
-            <p className="description">
-              Gender pay gap is a difference between average annual earnings of
-              women and men. According to the Global Gender Gap Report 2022,
-              Central Asia will close the gender gap in 152 years. Let’s see
-              what happened in 152 years in the past and what will happen in the
-              future.
-            </p>
+            <p className="description">{t('descriptionMainPage')}</p>
             <img
               className="graphicImage"
-              src={IMAGES.graphic1}
+              src={IMAGES.graphics[i18n.language].graphic1}
               alt="Graphic 1"
             />
             <img
               className="graphicImage"
-              src={IMAGES.graphic2}
+              src={IMAGES.graphics[i18n.language].graphic2}
               alt="Graphic 2"
             />
             <img
               className="graphicImage"
-              src={IMAGES.graphic3}
+              src={IMAGES.graphics[i18n.language].graphic3}
               alt="Graphic 3"
             />
             <img
               className="graphicImage"
-              src={IMAGES.graphic4}
+              src={IMAGES.graphics[i18n.language].graphic4}
               alt="Graphic 4"
             />
             <img
               className="graphicImage"
-              src={IMAGES.graphic5}
+              src={IMAGES.graphics[i18n.language].graphic5}
               alt="Graphic 5"
             />
           </div>

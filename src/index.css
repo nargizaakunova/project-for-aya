@@ -963,7 +963,7 @@ a:active {
   margin-bottom: 50px;
   /* margin-top: 40px; */
 }
-.scrollable-content .description:nth-child(6) {
+.scrollable-content .description:nth-child(7) {
   margin-top: 40px;
 }
 
@@ -1271,4 +1271,13 @@ button.go-to-main {
   100% {
     background-color: #bde0fe;
   }
+}
+
+.languages {
+  position: relative;
+  top: 12px;
+}
+
+a {
+  text-decoration: none;
 }
