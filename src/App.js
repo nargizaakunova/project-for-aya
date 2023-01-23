@@ -140,6 +140,9 @@ const App = () => {
   const onSwiper = (swiper) => {
     setSwiperInst(swiper);
     swiper.slideTo(mainPageIndex, 0);
+    setTimeout(() => {
+      swiper.slideTo(mainPageIndex, 0);
+    });
   };
 
   const scrollLeftHandler = () => {
