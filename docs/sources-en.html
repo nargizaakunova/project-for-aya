@@ -14,13 +14,16 @@
       }
 
       body {
-        margin: 100px;
+        margin: 100px 100px 30px;
         font-family: 'Montserrat', sans-serif;
       }
 
       @media (max-width: 768px) {
         body {
-          margin: 100px 50px;
+          margin: 100px 50px 30px;
+        }
+        footer {
+          margin-top: 50px;
         }
       }
 
@@ -50,6 +53,14 @@
 
       li {
         margin-bottom: 10px;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        margin-top: 40px;
       }
     </style>
   </head>
@@ -176,5 +187,11 @@
         >
       </li>
     </ol>
+    <footer>
+      <p>
+        © 2023 Project initiated by Aikokul Ibraeva. Developed by Nargiza
+        Akunova
+      </p>
+    </footer>
   </body>
 </html>
