@@ -336,6 +336,12 @@ a:active {
 .ru .first-slide h1 {
   font-size: 34px;
 }
+.first-slide p.timeHint {
+  margin-bottom: 34px;
+  font-size: 15px;
+  color: #444;
+  font-weight: 700;
+}
 .description {
   font-size: 18px;
   line-height: 1.4;
@@ -343,7 +349,7 @@ a:active {
   text-align: center;
   margin-bottom: 50px;
 }
-.scrollable-content .description:nth-child(7) {
+.scrollable-content .description:nth-child(8) {
   margin-top: 40px;
 }
 

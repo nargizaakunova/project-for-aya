@@ -16,6 +16,7 @@ i18n.use(initReactI18next).init({
         past: 'Past',
         future: 'Future',
         title: 'When Kyrgyzstan will close the Gender Pay Gap?',
+        timeHint: 'The countdown starts from 2022',
         scroll: 'Scroll up/down',
         swipe: 'Swipe up/down',
         descriptionMainPage:
@@ -54,7 +55,8 @@ i18n.use(initReactI18next).init({
         // Main Page
         past: 'Прошлое',
         future: 'Будущее',
-        title: 'Когда Кыргызстан устранит гендерный разрыв в оплате труда? ',
+        title: 'Когда Кыргызстан устранит гендерный разрыв в оплате труда?',
+        timeHint: 'Отсчет идет с 2022 года',
         scroll: 'Скрольте вниз/вверх',
         swipe: 'Свайпайте вниз/вверх',
         descriptionMainPage:
@@ -256,7 +258,7 @@ const App = () => {
                   <polyline fill="none" points="60 10 90 10 90 40" />
                   <line fill="none" x1="89" y1="11" x2="50" y2="50" />
                 </svg>
-                <a href="./sources.html">{t('sources')}</a>
+                <a href={`./sources-${i18n.language}.html`}>{t('sources')}</a>
               </span>
               <button className="go-to-main" onClick={goToMainPage}>
                 {t('button')}
@@ -350,6 +352,7 @@ const App = () => {
               </a>
             </span>
             <h1>{t('title')}</h1>
+            <p className="timeHint">{t('timeHint')}</p>
 
             <svg
               style={{ overflow: 'visible', marginBottom: '8px' }}
