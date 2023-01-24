@@ -337,7 +337,7 @@ a:active {
   font-size: 34px;
 }
 .first-slide p.timeHint {
-  margin-bottom: 34px;
+  margin-bottom: 20px;
   font-size: 15px;
   color: #444;
   font-weight: 700;
@@ -349,7 +349,7 @@ a:active {
   text-align: center;
   margin-bottom: 50px;
 }
-.scrollable-content .description:nth-child(8) {
+.scrollable-content .description:nth-child(7) {
   margin-top: 40px;
 }
 

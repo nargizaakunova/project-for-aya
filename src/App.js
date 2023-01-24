@@ -16,7 +16,7 @@ i18n.use(initReactI18next).init({
         past: 'Past',
         future: 'Future',
         title: 'When Kyrgyzstan will close the Gender Pay Gap?',
-        timeHint: 'The countdown starts from 2022',
+        timeHint: '* The countdown starts from 2022',
         scroll: 'Scroll up/down',
         swipe: 'Swipe up/down',
         descriptionMainPage:
@@ -56,7 +56,7 @@ i18n.use(initReactI18next).init({
         past: 'Прошлое',
         future: 'Будущее',
         title: 'Когда Кыргызстан устранит гендерный разрыв в оплате труда?',
-        timeHint: 'Отсчет идет с 2022 года',
+        timeHint: '* Отсчет идет с 2022 года',
         scroll: 'Скрольте вниз/вверх',
         swipe: 'Свайпайте вниз/вверх',
         descriptionMainPage:
@@ -92,7 +92,7 @@ i18n.use(initReactI18next).init({
         genderGap: 'Центральная Азия ликвидирует гендерный разрыв (+152 года)',
         unicorn: 'Гендерное равенство достигнуто во всем мире (+286 лет)',
         // List of sources
-        sources: 'Список ресурсов',
+        sources: 'Список источников',
         button: 'Вернуться в настоящее время',
       },
     },
@@ -352,7 +352,6 @@ const App = () => {
               </a>
             </span>
             <h1>{t('title')}</h1>
-            <p className="timeHint">{t('timeHint')}</p>
 
             <svg
               style={{ overflow: 'visible', marginBottom: '8px' }}
@@ -383,6 +382,7 @@ const App = () => {
             <p>{!isMobile ? t('scroll') : t('swipe')}</p>
 
             <p className="description">{t('descriptionMainPage')}</p>
+            <p className="timeHint">{t('timeHint')}</p>
             <img
               className="graphicImage"
               src={IMAGES.graphics[i18n.language].graphic1}
